@@ -1,0 +1,23 @@
+<%= content_tag_for :li, folder, {:class => "#{"showing" if !@folder.blank? && @folder == folder}"}.merge(mouseover) do %>
+	<%= content_tag(:div, "draggable", :class => "order_handle") if logged_in_as_admin? %>
+	<%= link_to folder.name, section_folder_path(folder.section, folder), :class => "link folder" %>
+
+	<% if folder.has_multiple_pages? || folder.has_both_of_page_and_board? %>
+
+		<ul class="folder_items">
+			<% folder.pages.each do |pg| %>
+				<li class="item"><%= link_to pg.title, [folder.section, folder, pg], :class => "item #{"showing" if !@page.blank? && @page == pg}" %></li>
+			<% end %>
+		</ul>
+
+	<% end %>
+
+	<% if folder.has_board? %>
+		<ul class="folder_items">
+			<% folder.boards.each do |b| %>
+				<li class="item"><%= link_to b.title, [folder.section, folder, b], :class => "item #{"showing" if !@board.blank? && @board == b}" %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+<% end %>

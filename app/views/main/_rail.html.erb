@@ -1,0 +1,25 @@
+<div id="rail">
+
+	<% if logged_in_as_admin? %>
+		<%= form_for [@section, @section.folders.new], :remote => true, :html => { :onsubmit => "zLoading();" } do |f| %>
+			<div class="hidden">
+				<%= f.text_field :section_id %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :name, :class => "text control_placeholder", :placeholder => "폴더이름..", :autocomplete => "off" %>
+			</div>
+
+			<div class="actions ph_child">
+				<%= submit_tag("생성", :class => "zButton right") %>
+			</div>
+		<% end %>
+	<% end %>
+
+	<ul id="folders" class="list_on_rail">
+		<%= render @section.folders.sequence %>
+	</ul>
+	<%= javascript_tag("initSortableFolders();") if logged_in_as_admin? %>
+
+</div>
+

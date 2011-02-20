@@ -1,0 +1,9 @@
+<%= form_for @comment, :remote => true, :html => { :onsubmit => "zLoading();" } do |f| %>
+	<div class="field">
+		<%= f.text_area :content, :class => "text" %>
+	</div>
+
+	<div class="actions">
+		<%= submit_tag("수정", :class => "zButton") %>
+	</div>
+<% end %>

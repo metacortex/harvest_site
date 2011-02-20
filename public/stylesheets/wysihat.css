@@ -1,0 +1,33 @@
+.editor {
+  clear: both;
+  min-height: 320px;
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #b4bbcd;
+  outline: none;
+  font-size: 12px; }
+
+.editor p {
+  margin: 0; }
+
+.editor ol,
+.editor ul {
+  list-style: inside; }
+  .editor ol li,
+  .editor ul li {
+    text-indent: 10px; }
+
+.editor_toolbar .button {
+  float: left;
+  margin: 2px 5px;
+  color: #3b5998;
+  text-decoration: none; }
+  .editor_toolbar .button:hover {
+    text-decoration: underline; }
+
+.editor_toolbar .selected {
+  color: #ff6600 !important; }
+
+#error {
+  font: 18px helvetica, arial, sans-serif;
+  color: red; }

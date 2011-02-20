@@ -1,0 +1,17 @@
+<h3>로그인</h3>
+
+<%= form_for(:user, :url => create_session_users_path) do |f| %>
+	<div class="field">
+		<%= f.label :login, '아이디' %>
+		<%= f.text_field :login, :class => "text smart_focus" %>
+	</div>
+
+	<div class="field">
+		<%= f.label :password, '암호' %>
+		<%= f.password_field :password, :class => "text"%>
+	</div>
+
+	<div class="actions">
+		<%= submit_tag("로그인", :class => "zButton") %>
+	</div>
+<% end %>	

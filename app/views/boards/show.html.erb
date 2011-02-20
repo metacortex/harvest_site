@@ -1,0 +1,23 @@
+<%= render :partial => '/main/rail' %>
+
+<div id="main_wrapper">
+	<%= admin_actions("#{link_to_function "게시판이름변경", "zLayer.open(event, '#{edit_section_folder_board_path(@section, @folder, @board)}')", :class => "link"}") %>
+
+	<div class="board">
+		<h5><%= @board.title %></h5>
+
+		<ul class="posts">
+			<%= render @posts %>
+		</ul>
+
+		<div class="toolbar">
+			<%= link_to "글쓰기", new_section_folder_board_post_path(@section, @folder, @board), :class => "link" %>
+		</div>
+
+		<div class="paginate">
+			<%= will_paginate(@posts, :previous_label => "<", :next_label => ">") %>
+		</div>
+
+	</div>
+
+</div>

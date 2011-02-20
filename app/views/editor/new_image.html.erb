@@ -1,0 +1,13 @@
+<%= form_for(Asset.new, :url => editor_path('create_image', :editor_id => params[:editor_id]), :html => { :target => "upload_frame", :multipart => true, :onsubmit => "zLoading();" }) do |f| %>
+
+	<div class="field">
+		<%= f.file_field :attachment, :class => "file" %>
+	</div>
+
+	<div class="actions">
+		<%= submit_tag("업로드", :class => "zButton") %>
+	</div>
+
+<% end %>
+
+<iframe id="upload_frame" name="upload_frame" style="display:none" src="about:blank"></iframe>

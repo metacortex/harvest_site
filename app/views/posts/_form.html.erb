@@ -1,0 +1,58 @@
+<script type="text/javascript" charset="utf-8">
+	document.on("dom:loaded", function() {
+		var editor = WysiHat.Editor.attach('post_content');
+		var toolbar = new WysiHat.Toolbar(editor);
+
+		toolbar.addButton({ label: "Bold" });
+		toolbar.addButton({ label: "Underline" });
+		toolbar.addButton({ label: "Italic" });
+		toolbar.addButton({ name: 'strikethrough', label: "Strike" });
+
+		// toolbar.addButtonSet(WysiHat.Toolbar.ButtonSets.Basic);
+
+		// Hide our error message if the editor loads fine
+		$('error').hide();
+	});
+</script>
+
+<%= form_for [@section, @folder, @board, @post], :html => { :multipart => true, :class => "new", :onsubmit => "zLoading();updateWHContent();" } do |f| %>
+
+	<% if @post.errors.any? %>
+		<div id="error_explanation">
+			<h4><%= @post.errors.count %>개의 문제가 있습니다.</h4>
+
+			<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+				<li><%= msg.gsub(/^[-_a-zA-Z0-9]+\s/,'') %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div class="hidden">
+		<%= f.hidden_field :section_id %>
+		<%= f.hidden_field :folder_id %>
+		<%= f.hidden_field :board_id %>
+	</div>
+
+	<div class="field">
+		<%= f.text_field :title, :class => "text control_placeholder", :placeholder => "글 제목..", :autocomplete => "off" %>
+	</div>
+
+	<div class="field">
+		<%= f.label :attachment, "파일첨부" %>
+		<%= f.file_field :attachment, :class => "file" %>
+	</div>
+
+	<div class="field">
+		<%= f.text_area :content, :class => "text" %>
+	</div>
+
+	<div class="actions">
+		<%= submit_tag("글 남기기 ", :class => "zButton") %>
+		<%= cancel_to %>
+	</div>
+
+<% end %>
+
+

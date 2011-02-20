@@ -1,0 +1,212 @@
+#wrapper {
+  width: 950px;
+  margin: 0 auto; }
+
+#header {
+  padding: 10px 0; }
+  #header:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #header {
+    display: inline-block; }
+  * html #header {
+    height: 1%; }
+  #header {
+    display: block; }
+  #header #alert {
+    position: absolute;
+    width: 950px;
+    text-align: center;
+    top: 5px;
+    color: #3b5998;
+    font-size: 13px;
+    font-weight: bold; }
+  #header h1 {
+    float: left; }
+  #header div.top_actions {
+    float: right; }
+  #header div.sections {
+    clear: both;
+    padding: 10px 0; }
+    #header div.sections:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    #header div.sections {
+      display: inline-block; }
+    * html #header div.sections {
+      height: 1%; }
+    #header div.sections {
+      display: block; }
+    #header div.sections a {
+      display: block;
+      float: left;
+      margin-right: 20px; }
+      #header div.sections a.showing {
+        color: #ff6600; }
+
+#section:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+#section {
+  display: inline-block; }
+* html #section {
+  height: 1%; }
+#section {
+  display: block; }
+#section #rail {
+  float: left;
+  width: 180px; }
+  #section #rail form input.text,
+  #section #rail form textarea.text {
+    width: 170px; }
+  #section #rail ul#folders li.folder {
+    position: relative; }
+    #section #rail ul#folders li.folder div.order_handle {
+      visibility: hidden;
+      position: absolute;
+      right: 0;
+      top: 7px;
+      height: 20px;
+      width: 15px;
+      overflow: hidden;
+      background: url(/images/draggable.png) no-repeat 0 0;
+      text-indent: -9999px; }
+    #section #rail ul#folders li.folder.hover .order_handle {
+      visibility: visible; }
+    #section #rail ul#folders li.folder a.folder {
+      display: block;
+      padding: 6px 2px 4px;
+      border-bottom: 1px solid #e1e1e1; }
+      #section #rail ul#folders li.folder a.folder:hover {
+        background-color: #dde0e8;
+        text-decoration: none; }
+    #section #rail ul#folders li.folder.showing a.folder {
+      background-color: #dde0e8;
+      font-weight: bold; }
+    #section #rail ul#folders li.folder ul.folder_items li.item {
+      background: url(/images/blt_dot.gif) no-repeat 3px 50%; }
+      #section #rail ul#folders li.folder ul.folder_items li.item a.item {
+        display: block;
+        padding: 6px 2px 4px;
+        margin-left: 15px;
+        color: #666666;
+        text-decoration: none;
+        border-bottom: 1px solid #e9e9e9; }
+        #section #rail ul#folders li.folder ul.folder_items li.item a.item:hover {
+          background-color: #e9e9e9; }
+        #section #rail ul#folders li.folder ul.folder_items li.item a.item.showing {
+          font-weight: bold; }
+#section #main_wrapper {
+  float: right;
+  width: 760px; }
+  #section #main_wrapper form.new input.text {
+    width: 562.5px; }
+  #section #main_wrapper form.new textarea.text {
+    width: 750px; }
+  #section #main_wrapper .admin_actions {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d7d7d7; }
+    #section #main_wrapper .admin_actions a {
+      margin-right: 10px; }
+  #section #main_wrapper div.page h5 {
+    padding-bottom: 10px; }
+  #section #main_wrapper div.board h5 {
+    padding-bottom: 10px; }
+  #section #main_wrapper div.board ul.posts {
+    border-top: 1px solid #e2e2e2; }
+    #section #main_wrapper div.board ul.posts li.post {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e2e2; }
+      #section #main_wrapper div.board ul.posts li.post:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      #section #main_wrapper div.board ul.posts li.post {
+        display: inline-block; }
+      * html #section #main_wrapper div.board ul.posts li.post {
+        height: 1%; }
+      #section #main_wrapper div.board ul.posts li.post {
+        display: block; }
+      #section #main_wrapper div.board ul.posts li.post a {
+        color: #333333;
+        text-decoration: none; }
+        #section #main_wrapper div.board ul.posts li.post a:hover {
+          text-decoration: underline; }
+      #section #main_wrapper div.board ul.posts li.post div.f {
+        float: left;
+        text-align: center; }
+        #section #main_wrapper div.board ul.posts li.post div.f.post_id {
+          width: 30px; }
+        #section #main_wrapper div.board ul.posts li.post div.f.post_title {
+          width: 430px;
+          text-align: left; }
+        #section #main_wrapper div.board ul.posts li.post div.f.post_user {
+          width: 140px; }
+        #section #main_wrapper div.board ul.posts li.post div.f.post_date {
+          width: 120px; }
+        #section #main_wrapper div.board ul.posts li.post div.f.post_hits {
+          width: 40px; }
+  #section #main_wrapper div.board .toolbar {
+    text-align: right;
+    padding: 5px 0; }
+  #section #main_wrapper div.post h5 {
+    padding-bottom: 10px; }
+  #section #main_wrapper div.post .post_byline {
+    text-align: right; }
+  #section #main_wrapper div.post .post_attachment {
+    padding: 5px 10px;
+    background-color: #e9e9e9; }
+  #section #main_wrapper div.post .post_content {
+    padding: 10px 0; }
+  #section #main_wrapper div.post .owner_action {
+    text-align: right;
+    padding: 5px 0; }
+  #section #main_wrapper div.post .toolbar {
+    text-align: left;
+    padding: 5px 0;
+    border-top: 1px solid #e2e2e2; }
+  #section #main_wrapper div.post div.comments {
+    padding: 20px 0; }
+    #section #main_wrapper div.post div.comments form.new_comment textarea.text {
+      width: 506.667px;
+      height: 54px; }
+  #section #main_wrapper div.post ul#comments li.comment {
+    padding: 10px 0;
+    border-top: 1px solid #e9e9e9;
+    position: relative; }
+    #section #main_wrapper div.post ul#comments li.comment .owner_actions {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      visibility: hidden; }
+    #section #main_wrapper div.post ul#comments li.comment .comment_header {
+      color: #7a7a7a; }
+    #section #main_wrapper div.post ul#comments li.comment .comment_content span.date {
+      color: #7a7a7a;
+      padding-left: 5px;
+      font-size: 11px;
+      letter-spacing: -1px; }
+    #section #main_wrapper div.post ul#comments li.comment.hover .owner_actions {
+      visibility: visible; }
+
+#footer {
+  margin: 50px 0;
+  text-align: center; }
+  #footer address {
+    color: #7a7a7a; }
+
+form.edit_comment textarea.text {
+  width: 506.667px;
+  height: 54px; }

@@ -1,0 +1,23 @@
+<%= content_tag_for :li, post do %>
+
+	<div class="f post_id">
+		<%= @board.posts_count - (Post.per_page * params[:page].to_i) - post_counter %>
+	</div>
+
+	<div class="f post_title">
+		<%= link_to post.title, [@section, @folder, @board, post] %>
+	</div>
+
+	<div class="f post_user">
+		<%= post.user.login %>
+	</div>
+
+	<div class="f post_date">
+		<%= post.created_at.strftime("%Y.%m.%d") %>
+	</div>
+
+	<div class="f post_hits">
+		<%= number_with_delimiter(post.hits) %>
+	</div>
+
+<% end %>

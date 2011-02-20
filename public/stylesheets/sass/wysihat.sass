@@ -1,0 +1,36 @@
+@import mixin.sass
+
+.editor 
+	:clear both
+	:min-height 320px
+	:margin 5px 0
+	:padding 5px
+	:border 1px solid !c_border
+	:outline none
+	:font-size 12px
+
+.editor p
+	:margin 0
+
+.editor
+	ol,
+	ul
+		:list-style inside
+		li
+			:text-indent 10px
+
+.editor_toolbar .button
+	:float left
+	:margin 2px 5px
+	:color !c_blue
+	:text-decoration none
+	&:hover
+		:text-decoration underline
+
+.editor_toolbar .selected
+	:color !c_orange !important
+
+#error 
+	:font 18px helvetica, arial, sans-serif
+	:color red
+

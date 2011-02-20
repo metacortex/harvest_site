@@ -1,0 +1,60 @@
+<%= render :partial => '/main/rail' %>
+
+<div id="main_wrapper">
+	<%= admin_actions %>
+
+	<div class="post">
+
+		<h5><%= @post.title %></h5>
+
+		<div class="post_byline">
+			<%= @post.user.login %>
+			<%= @post.created_at.strftime("%Y.%m.%d") %>
+		</div>
+
+		<% if @post.has_attachment? %>
+			<div class="post_attachment">
+				첨부파일: <%= link_to @post.attachment_file_name, @post.attachment.url, :class => "link" %>
+			</div>
+		<% end %>
+
+		<div class="post_content">
+			<%= @post.content.html_safe %>
+		</div>
+
+		<% if @post.owned_by?(@current_user) %>
+			<div class="owner_action">
+				<%= link_to "수정", edit_section_folder_board_post_path(@section, @folder, @board, @post), :class => "link" %>
+				<%= link_to "삭제", [@section, @folder, @board, @post], :remote => true, :method => :delete, :confirm => "삭제하시겠습니까?", :class => "link" %>
+			</div>
+		<% end %>
+
+		<div class="comments">
+			<%= form_for @post.comments.new, :remote => true, :html => { :onsubmit => "zLoading();" } do |f| %>
+				<div class="hidden">
+					<%= f.text_field :post_id, :value => @post.id %>
+				</div>
+
+				<div class="field">
+					<%= f.text_area :content, :class => "text" %>
+				</div>
+
+				<div class="actions">
+					<%= submit_tag("댓글남기기", :class => "zButton") %>
+				</div>
+			<% end %>
+		</div>
+
+		<ul id="comments">
+			<%= render @post.comments.order("id desc") %>
+		</ul>
+
+		<div class="toolbar">
+			<%= link_to "목록으로", [@section, @folder, @board], :class => "link" %>
+		</div>
+
+	</div> <!-- post -->
+
+</div>
+
+

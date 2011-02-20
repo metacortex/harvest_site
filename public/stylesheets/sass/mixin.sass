@@ -1,0 +1,152 @@
+!border_width = 1px
+!input_padding = 4px
+!std_padding = 10px
+!std_margin = 5px
+!reply_photo_width = 24px
+
+!full_width = 950px
+!rail_width = 180px
+!main_width = !full_width - !rail_width - !std_padding
+
+!c_border = #B4BBCD
+!c_f7 = #F7F7F7
+!c_e7 = #E7E7E7
+!c_d7 = #D7D7D7
+!c_c7 = #C7C7C7
+!c_b7 = #B7B7B7
+!c_a7 = #A7A7A7
+!c_9 = #999
+!c_6 = #666
+!c_3 = #333
+
+!c_red = #ee1b2e
+!c_blue = #3B5998
+!c_light_blue = #9abeee
+!c_orange = #f60
+
+!c_text = #4D4D4D
+!c_body_bg = #e8e8e8
+!c_content_bg = #fff
+
+=png
+	:behavior url("/iepngfix.htc")
+
+=round_border(!how_many)
+	:border-radius = !how_many
+	:-moz-border-radius = !how_many
+	:-webkit-border-radius = !how_many
+
+=round_each_border(!t,!r,!b,!l)
+	:border-radius = !t !r !b !l
+	:-moz-border-radius = !t !r !b !l
+	:-webkit-border-radius = !t !r !b !l
+
+=default_input
+	+engrave_border
+	:background = transparent url(/images/input_active.png) no-repeat 0 0
+	:padding = !input_padding
+
+// clearfix
+=clearfix
+	&:after
+		:content "."
+		:display block
+		:height 0
+		:clear both
+		:visibility hidden
+	&
+		:display inline-block
+	* html &
+		:height 1%
+	&
+		:display block
+
+=huge_font
+	:font-size 32px
+	:font-weight bold
+
+=biggest_font
+	:font-size 22px
+	:font-weight bold
+
+=bigger_font
+	:font-size 18px
+	:font-weight bold
+
+=big_font
+	:font-size 14px
+	:font-weight bold
+
+=norm_font
+	:font-size 12px
+	:font-weight normal
+
+=small_font
+	:font-size 11px
+	:font-weight normal
+
+=smaller_font
+	:font-size 11px
+	:font-weight normal
+	:letter-spacing -1px
+
+=smallest_font
+	:font-size 10px
+	:font-weight normal
+	:letter-spacing -1px
+
+=light_engrave_border
+	:border
+		:style solid
+		:color = !c_b7 !c_e7 !c_e7 !c_b7
+		:width 1px
+=light_emboss_border
+	:border
+		:style solid
+		:color = !c_e7 !c_b7 !c_b7 !c_e7
+		:width 1px
+
+=engrave_border
+	:border
+		:style solid
+		:color = !c_9 !c_d7 !c_d7 !c_9
+		:width 1px
+=emboss_border
+	:border
+		:style solid
+		:color = !c_d7 !c_9 !c_9 !c_d7
+		:width 1px
+=shadow
+	:border
+		:style solid
+		:color = white !c_b7 !c_b7 white
+		:width 1px
+=rail_shadow
+	:border
+		:width 1px
+		:style solid
+		:color #BDBDBD #ABABAB #ABABAB #BDBDBD
+=main_shadow
+	:border
+		:width 1px
+		:style solid
+		:color #DADADA #C9C9C9 #C9C9C9 #DADADA
+=opacity(!volume)
+	:filter = "alpha(opacity=" + !volume + ")"
+	:-moz-opacity = !volume * 0.01
+	:opacity = !volume * 0.01
+
+=gradient_bg(!c_start, !c_end)
+	:background -webkit-gradient(linear, left top, left bottom, from(!c_start), to(!c_end))
+	:background -moz-linear-gradient(top, !c_start, !c_end)
+	:filter progid:DXImageTransform.Microsoft.gradient(startColorstr=!c_start, endColorstr=!c_end)
+
+=butt_gradient_bg
+	:background -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#DDE0E8))
+	:background -moz-linear-gradient(top, #FBFBFB, #DDE0E8)
+	:filter progid:DXImageTransform.Microsoft.gradient(startColorstr=#FBFBFB, endColorstr=#DDE0E8)
+
+=butt_hover_gradient_bg
+	:background -webkit-gradient(linear, left top, left bottom, from(#F4F4F4), to(#FBFBFB))
+	:background -moz-linear-gradient(top, #F4F4F4, #FBFBFB)
+	:filter progid:DXImageTransform.Microsoft.gradient(startColorstr=#F4F4F4, endColorstr=#FBFBFB)

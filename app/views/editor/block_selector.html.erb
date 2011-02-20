@@ -1,0 +1,5 @@
+<div>
+	<% {"Header 1" => "h1", "Header 2" => "h2", "Header 3" => "h3", "Header 4" => "h4", "Header 5" => "h5", "Normal" => "p"}.each do |k,v| %>
+		<%= link_to_function k, "zLayer.close();$('#{params[:editor_id]}').formatblockSelection('#{v}');", :class => "link" %>
+	<% end %>
+</div>

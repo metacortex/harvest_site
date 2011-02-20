@@ -1,0 +1,179 @@
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  left: -30000px; }
+
+div.palette:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+div.palette {
+  display: inline-block; }
+* html div.palette {
+  height: 1%; }
+div.palette {
+  display: block; }
+div.palette a {
+  display: block;
+  float: left;
+  width: 18px;
+  height: 18px;
+  border: 1px solid white;
+  text-decoration: none; }
+  div.palette a:hover {
+    border: 1px solid black; }
+
+a.link {
+  color: #3b5998;
+  text-decoration: none; }
+  a.link:hover {
+    text-decoration: underline; }
+
+.zButton {
+  float: left;
+  display: block;
+  padding: 4px 10px;
+  border-style: solid;
+  border-color: #d7d7d7 #999999 #999999 #d7d7d7;
+  border-width: 1px;
+  margin: 0;
+  font-size: 11px;
+  color: #666666;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#dde0e8));
+  background: -moz-linear-gradient(top, #fbfbfb, #dde0e8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FBFBFB, endColorstr=#DDE0E8);
+  text-decoration: none; }
+  .zButton:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  .zButton {
+    display: inline-block; }
+  * html .zButton {
+    height: 1%; }
+  .zButton {
+    display: block; }
+  .zButton.spacer {
+    margin: 0 5px 0; }
+  .zButton.right {
+    float: right; }
+    .zButton.right.spacer {
+      margin: 0 0 0 5px; }
+  .zButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#fbfbfb));
+    background: -moz-linear-gradient(top, #f4f4f4, #fbfbfb);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F4F4F4, endColorstr=#FBFBFB);
+    color: #777777;
+    border-style: solid;
+    border-color: #b4bbcd #8896bc #8896bc #b4bbcd;
+    border-width: 1px; }
+  .zButton.disabled {
+    color: #999999; }
+  .zButton.first {
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px; }
+  .zButton.last {
+    border-right: 1px solid #d9d9d9;
+    border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0; }
+
+form .field {
+  padding: 5px 0; }
+  form .field:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  form .field {
+    display: inline-block; }
+  * html form .field {
+    height: 1%; }
+  form .field {
+    display: block; }
+  form .field.file {
+    padding: 5px;
+    border-style: solid;
+    border-color: #999999 #d7d7d7 #d7d7d7 #999999;
+    border-width: 1px;
+    background: white; }
+    form .field.file p {
+      color: #666666; }
+  form .field label {
+    display: block;
+    float: left;
+    font-size: 12px;
+    text-align: right;
+    line-height: 24px;
+    padding-right: 5px;
+    color: #666666; }
+    form .field label.req {
+      color: #ff6600; }
+  form .field span.exam {
+    display: block;
+    clear: both;
+    font-size: 11px;
+    color: #999999;
+    letter-spacing: -1px; }
+  form .field input.file {
+    display: block; }
+  form .field input.text {
+    display: block;
+    float: left;
+    border: 1px solid #b4bbcd;
+    padding: 4px;
+    height: 15px;
+    line-height: 15px; }
+  form .field textarea.text {
+    display: block;
+    border: 1px solid #b4bbcd;
+    padding: 4px; }
+form .actions {
+  padding-bottom: 5px;
+  text-align: left; }
+  form .actions:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  form .actions {
+    display: inline-block; }
+  * html form .actions {
+    height: 1%; }
+  form .actions {
+    display: block; }
+
+.pagination {
+  text-align: center;
+  height: 28px; }
+  .pagination a,
+  .pagination span,
+  .pagination em {
+    font-size: 11px;
+    padding: 7px 10px;
+    font-family: "Dotum", sans-serif;
+    color: #b9b9b9;
+    position: relative;
+    top: 4px; }
+  .pagination a {
+    text-decoration: none;
+    border: 1px solid #d6d6d6;
+    background: #eeeeee; }
+    .pagination a:visited {
+      color: #b9b9b9; }
+    .pagination a:hover {
+      color: white;
+      background-color: #3b5998; }
+  .pagination span.disabled {
+    color: #b9b9b9; }
+  .pagination em {
+    color: white;
+    background-color: #3b5998;
+    border: 1px solid white; }

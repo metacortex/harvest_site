@@ -1,0 +1,17 @@
+<%= form_for [@section, @folder, @board], :remote => true, :html => { :onsubmit => "zLoading();" } do |f| %>
+	<div class="hidden">
+		<%= f.text_field :section_id, :value => @section.id %>
+		<%= f.text_field :folder_id %>
+	</div>
+
+	<div class="field">
+		<%= f.text_field :title, :class => "text smart_focus", :autocomplete => "off" %>
+	</div>
+
+	<div class="actions ph_child">
+		<%= submit_tag("수정", :class => "zButton right") %>
+	</div>
+<% end %>
+
+<script>initSmartFocus();</script>
+

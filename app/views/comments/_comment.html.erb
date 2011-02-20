@@ -1,0 +1,16 @@
+<%= content_tag_for :li, comment, mouseover do %>
+	<% if comment.owned_by?(@current_user) %>
+		<div class="owner_actions">
+			<%= link_to_function "수정", "zLayer.open(event, '#{edit_comment_path(comment)}')", :class => "link" %>
+			<%= link_to "삭제 ", comment_path(comment), :remote => true, :method => :delete, :confirm => "삭제하시겠습니까?", :class => "link" %>
+		</div>
+	<% end %>
+
+	<div class="comment_header">
+		<%= comment.user.login %>
+	</div>
+	<div class="comment_content">
+		<%= nl2br comment.content %>
+		<span class="date"><%= dtime_in_words(comment.created_at) %></span>
+	</div>
+<% end %>

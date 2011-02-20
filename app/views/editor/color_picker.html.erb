@@ -1,0 +1,5 @@
+<div class="palette">
+	<% Colors.each do |c| %>
+		<%= link_to_function "&nbsp;".html_safe, "zLayer.close();$('#{params[:editor_id]}').colorSelection('#{c}');", :style => "background-color:#{c}" %>
+	<% end %>
+</div>

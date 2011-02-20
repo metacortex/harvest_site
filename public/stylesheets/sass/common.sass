@@ -1,0 +1,128 @@
+@import mixin.sass
+
+.hidden
+	:position absolute
+	:visibility hidden
+	:left -30000px
+
+div.palette
+	+clearfix
+	a
+		:display block
+		:float left
+		:width 18px
+		:height 18px
+		:border 1px solid white
+		:text-decoration none
+		&:hover
+			:border 1px solid black
+
+a.link
+	:color = !c_blue
+	:text-decoration none
+	&:hover
+		:text-decoration underline
+
+.zButton
+	:float left
+	:display block
+	:padding 4px !std_padding
+	+emboss_border
+	:margin 0
+	:font-size 11px
+	:color #666
+	+butt_gradient_bg
+	:text-decoration none
+	+clearfix
+	&.spacer
+		:margin 0 !std_margin 0
+	&.right
+		:float right
+		&.spacer
+			:margin 0 0 0 !std_margin
+	&:hover
+		+butt_hover_gradient_bg
+		:color #777
+		:border
+			:style solid
+			:color = !c_border #8896bc #8896bc !c_border 
+			:width 1px
+	&.disabled
+		:color #999
+	&.first
+		+round_each_border(!std_margin,0,0,!std_margin)
+	&.last
+		:border-right 1px solid #d9d9d9
+		+round_each_border(0,!std_margin,!std_margin,0)
+
+form
+	.field
+		+clearfix
+		:padding = !std_margin 0
+		&.file
+			:padding 5px
+			+engrave_border
+			:background white
+			p
+				:color #666
+		label	
+			:display block
+			:float left
+			:font-size 12px
+			:text-align right
+			:line-height 24px
+			:padding-right = !std_margin
+			:color #666
+			&.req
+				:color !c_orange
+		span.exam
+			:display block
+			:clear both
+			:font-size 11px
+			:color #999
+			:letter-spacing -1px
+		input.file
+			:display block
+		input.text
+			:display block
+			:float left
+			:border 1px solid !c_border
+			:padding = !input_padding
+			:height 15px
+			:line-height 15px
+		textarea.text
+			:display block
+			:border 1px solid !c_border
+			:padding = !input_padding
+	.actions
+		:padding-bottom = !std_margin
+		:text-align left
+		+clearfix
+
+.pagination
+	:text-align center
+	:height 28px
+	a,
+	span,
+	em
+		:font-size 11px
+		:padding = 7px !std_padding
+		:font-family "Dotum", sans-serif
+		:color #b9b9b9
+		:position relative
+		:top 4px
+	a
+		:text-decoration none
+		:border 1px solid #d6d6d6
+		:background #eee
+		&:visited
+			:color = #b9b9b9
+		&:hover
+			:color = white
+			:background-color !c_blue
+	span.disabled
+		:color = #b9b9b9
+	em
+		:color white
+		:background-color !c_blue
+		:border 1px solid white

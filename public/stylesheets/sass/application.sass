@@ -1,0 +1,186 @@
+@import mixin.sass
+
+#wrapper
+	:width !full_width
+	:margin 0 auto
+
+#header
+	:padding !std_padding 0
+	+clearfix
+	#alert
+		:position absolute
+		:width !full_width
+		:text-align center
+		:top 5px
+		:color = !c_blue
+		:font-size 13px
+		:font-weight bold
+	h1
+		:float left
+	div.top_actions
+		:float right
+	div.sections
+		+clearfix
+		:clear both
+		:padding !std_padding 0
+		a
+			:display block
+			:float left
+			:margin-right !std_padding*2
+			&.showing
+				:color !c_orange
+#section
+	+clearfix
+	#rail
+		:float left
+		:width !rail_width
+		form
+			input.text,
+			textarea.text
+				:width = !rail_width - (!input_padding*2) - (!border_width*2)
+		ul#folders
+			li.folder
+				:position relative
+				div.order_handle
+					:visibility hidden
+					:position absolute
+					:right 0
+					:top 7px
+					:height 20px
+					:width 15px
+					:overflow hidden
+					:background url(/images/draggable.png) no-repeat 0 0
+					:text-indent -9999px
+				&.hover
+					.order_handle
+						:visibility visible
+				a.folder
+					:display block
+					:padding 6px 2px 4px
+					:border-bottom 1px solid #e1e1e1
+					&:hover
+						:background-color #DDE0E8
+						:text-decoration none
+				&.showing
+					a.folder
+						:background-color #DDE0E8
+						:font-weight bold
+				ul.folder_items
+					li.item
+						:background url(/images/blt_dot.gif) no-repeat 3px 50%
+						a.item
+							:display block
+							:padding 6px 2px 4px
+							:margin-left 15px
+							:color #666
+							:text-decoration none
+							:border-bottom 1px solid #e9e9e9
+							&:hover
+								:background-color #e9e9e9
+							&.showing
+								:font-weight bold
+	#main_wrapper
+		:float right
+		:width !main_width
+		form.new
+			input.text
+				:width (!main_width - (!input_padding*2) - (!border_width*2)) / 4 * 3
+			textarea.text
+				:width !main_width - (!input_padding*2) - (!border_width*2)
+		.admin_actions
+			:padding-bottom !std_margin
+			:margin-bottom !std_padding
+			:border-bottom 1px solid #d7d7d7
+			a
+				:margin-right !std_padding
+		div.page
+			h5
+				:padding-bottom !std_padding
+			div.page_content
+		div.board
+			h5
+				:padding-bottom !std_padding
+			ul.posts
+				:border-top 1px solid #e2e2e2
+				li.post
+					+clearfix
+					:padding !std_padding 0
+					:border-bottom 1px solid #e2e2e2
+					a
+						:color #333
+						:text-decoration none
+						&:hover
+							:text-decoration underline
+					div.f
+						:float left
+						:text-align center
+						&.post_id
+							:width 30px
+						&.post_title
+							:width !main_width - 30px - 140px - 120px - 40px
+							:text-align left
+						&.post_user
+							:width 140px
+						&.post_date
+							:width 120px
+						&.post_hits
+							:width 40px
+			.toolbar
+				:text-align right
+				:padding !std_margin 0
+		div.post
+			h5
+				:padding-bottom !std_padding
+			.post_byline
+				:text-align right
+			.post_attachment
+				:padding !std_margin !std_padding
+				:background-color #e9e9e9
+			.post_content
+				:padding !std_padding 0
+			.owner_action
+				:text-align right
+				:padding !std_margin 0
+			.toolbar
+				:text-align left
+				:padding !std_margin 0
+				:border-top 1px solid #e2e2e2
+			div.comments
+				:padding !std_padding*2 0
+				form.new_comment
+					textarea.text
+						:width !main_width / 3 * 2
+						:height 54px
+			ul#comments
+				li.comment
+					:padding !std_padding 0
+					:border-top 1px solid #e9e9e9
+					:position relative
+					.owner_actions
+						:position absolute
+						:right 5px
+						:top 5px
+						:visibility hidden
+					.comment_header
+						:color #7a7a7a
+					.comment_content
+						span.date
+							:color #7a7a7a
+							:padding-left !std_margin
+							:font-size 11px
+							:letter-spacing -1px
+					&.hover
+						.owner_actions
+							:visibility visible
+#footer
+	:margin 50px 0
+	:text-align center
+	address
+		:color #7a7a7a
+
+
+form.edit_comment
+	textarea.text
+		:width !main_width / 3 * 2
+		:height 54px
+		
