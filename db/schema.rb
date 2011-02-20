@@ -58,8 +58,9 @@ ActiveRecord::Schema.define(:version => 20110220012050) do
   add_index "folders", ["section_id"], :name => "index_folders_on_section_id"
 
   create_table "pages", :force => true do |t|
-    t.integer  "section_id", :null => false
-    t.integer  "folder_id",  :null => false
+    t.integer  "section_id",                :null => false
+    t.integer  "folder_id",                 :null => false
+    t.integer  "parent_id",  :default => 0, :null => false
     t.string   "title"
     t.text     "content"
     t.integer  "position"

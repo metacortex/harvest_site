@@ -4,6 +4,7 @@ class CreatePages < ActiveRecord::Migration
 
 			t.integer	:section_id, :null => false
 			t.integer	:folder_id, :null => false
+			t.integer	:parent_id, :null => false, :default => 0
 			t.string	:title
 			t.text		:content
 			t.integer	:position
