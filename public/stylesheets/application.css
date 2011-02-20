@@ -397,3 +397,9 @@
 form.edit_comment textarea.text {
   width: 513.333px;
   height: 54px; }
+
+div.insert_html {
+  padding-bottom: 10px; }
+  div.insert_html textarea {
+    width: 513.333px;
+    height: 62px; }

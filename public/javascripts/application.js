@@ -8,6 +8,18 @@ function initSortableFolders() {
 	Sortable.create("folders", {handle:'order_handle', onUpdate:function(){new Ajax.Request('/sections/1/folders/sort', {asynchronous:true, evalScripts:true, parameters:Sortable.serialize("folders")})}})
 };
 
+function toggleHTML(editor) {
+	var textarea = $(editor.id.replace(/_editor$/i, ''));
+	if(textarea.style.display == "none") {
+		textarea.value = editor.innerHTML;
+		textarea.show();
+		editor.hide();
+	} else {
+		editor.update(textarea.value);
+		editor.show();
+		textarea.hide();
+	}
+};
 function updateWHContent() {
 	var editor = $$('.editor').first();
 	var textarea = $(editor.id.replace(/_editor$/i, ''));
