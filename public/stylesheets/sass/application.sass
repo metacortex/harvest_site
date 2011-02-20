@@ -5,7 +5,7 @@
 	:margin 0 auto
 
 #header
-	:padding !std_padding 0
+	:padding-top 50px
 	+clearfix
 	#alert
 		:position absolute
@@ -17,18 +17,204 @@
 		:font-weight bold
 	h1
 		:float left
+		:background url(/images/Index/Top/index_top_title.png) no-repeat 0 0
+		a
+			:display block
+			:width !logo_width
+			:height !logo_height
+			:text-indent -9999px
+			&:focus
+				:outline none
 	div.top_actions
 		:float right
-	div.sections
 		+clearfix
-		:clear both
-		:padding !std_padding 0
 		a
 			:display block
 			:float left
-			:margin-right !std_padding*2
-			&.showing
-				:color !c_orange
+			:height 12px
+			:text-indent -9999px
+			:padding-left 7px
+			&:focus
+				:outline none
+			&.login
+				:background url(/images/Index/Top/Login_menu/index_logmenu_login_nor.png) no-repeat 0 0
+				:width 32px
+				&.showing,
+				&:hover
+					:background url(/images/Index/Top/Login_menu/index_logmenu_login_sel.png) no-repeat 0 0
+			&.signup
+				:background url(/images/Index/Top/Login_menu/index_logmenu_join_nor.png) no-repeat 0 0
+				:width 43px
+				&.showing,
+				&:hover
+					:background url(/images/Index/Top/Login_menu/index_logmenu_join_sel.png) no-repeat 0 0
+			&.announcement
+				:background url(/images/Index/Top/Login_menu/index_logmenu_announce_nor.png) no-repeat 0 0
+				:width 44px
+				&.showing,
+				&:hover
+					:background url(/images/Index/Top/Login_menu/index_logmenu_announce_sel.png) no-repeat 0 0
+			&.company
+				:background url(/images/Index/Top/Login_menu/index_logmenu_introduce_nor.png) no-repeat 0 0
+				:width 43px
+				&.showing,
+				&:hover
+					:background url(/images/Index/Top/Login_menu/index_logmenu_introduce_sel.png) no-repeat 0 0
+	#main_image
+		:clear both
+		:width !full_width
+		:height 500px + 10px
+		:background url(/images/Index/Main/index_main.png) no-repeat 0 10px
+		+clearfix
+	div.sections
+		+clearfix
+		:clear both
+		a
+			:display block
+			:float left
+			:width !folder_width
+			:height 40px
+			:text-indent -9999px
+			&:focus
+				:outline none
+			&.s_1
+				:background url(/images/Index/Navi_menu/index_navi_01_nor.png) no-repeat 0 0
+				&.showing,
+				&:hover
+					:background url(/images/Index/Navi_menu/index_navi_01_sel.png) no-repeat 0 0
+			&.s_2
+				:background url(/images/Index/Navi_menu/index_navi_02_nor.png) no-repeat 0 0
+				&.showing,
+				&:hover
+					:background url(/images/Index/Navi_menu/index_navi_02_sel.png) no-repeat 0 0
+			&.s_3
+				:background url(/images/Index/Navi_menu/index_navi_03_nor.png) no-repeat 0 0
+				&.showing,
+				&:hover
+					:background url(/images/Index/Navi_menu/index_navi_03_sel.png) no-repeat 0 0
+			&.s_4
+				:background url(/images/Index/Navi_menu/index_navi_04_nor.png) no-repeat 0 0
+				&.showing,
+				&:hover
+					:background url(/images/Index/Navi_menu/index_navi_04_sel.png) no-repeat 0 0
+			&.s_5
+				:background url(/images/Index/Navi_menu/index_navi_05_nor.png) no-repeat 0 0
+				&.showing,
+				&:hover
+					:background url(/images/Index/Navi_menu/index_navi_05_sel.png) no-repeat 0 0
+	div.folders
+		:width !full_width
+		:height 96px
+		:background url(/images/Index/Sub_menu/index_sub_background.png) no-repeat 0 0
+		+clearfix
+		.folder_container
+			:float left
+			:width !folder_width
+			:padding-top 2px
+			a
+				:display block
+				:width !folder_width
+				:text-indent -9999px
+				:margin-bottom 1px
+				:height 22px
+				:background url(/images/blank.gif) no-repeat 50% 50%
+				&:focus
+					:outline none
+		.section_1
+			a.folder_1
+				:height 23px
+				:background-image url(/images/Index/Sub_menu/index_sub_01-01_nor.png)
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_01-01_sel.png)
+			a.folder_2
+				:background-image url(/images/Index/Sub_menu/index_sub_01-02_nor.png)
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_01-02_sel.png)
+			a.folder_3
+				:background-image url(/images/Index/Sub_menu/index_sub_01-03_nor.png)
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_01-03_sel.png) 
+		.section_2
+			a.folder_1
+				:height 23px
+				:background-image url(/images/Index/Sub_menu/index_sub_02-01_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_02-01_sel.png) 
+			a.folder_2
+				:background-image url(/images/Index/Sub_menu/index_sub_02-02_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_02-02_sel.png) 
+			a.folder_3
+				:background-image url(/images/Index/Sub_menu/index_sub_02-03_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_02-03_sel.png) 
+			a.folder_4
+				:background-image url(/images/Index/Sub_menu/index_sub_02-04_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_02-04_sel.png) 
+		.section_3
+			a.folder_1
+				:height 23px
+				:background-image url(/images/Index/Sub_menu/index_sub_03-01_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_03-01_sel.png) 
+			a.folder_2
+				:background-image url(/images/Index/Sub_menu/index_sub_03-02_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_03-02_sel.png) 
+			a.folder_3
+				:background-image url(/images/Index/Sub_menu/index_sub_03-03_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_03-03_sel.png) 
+			a.folder_4
+				:background-image url(/images/Index/Sub_menu/index_sub_03-04_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_03-04_sel.png) 
+		.section_4
+			a.folder_1
+				:height 23px
+				:background-image url(/images/Index/Sub_menu/index_sub_04-01_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_04-01_sel.png) 
+			a.folder_2
+				:background-image url(/images/Index/Sub_menu/index_sub_04-02_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_04-02_sel.png) 
+		.section_5
+			a.folder_1
+				:height 23px
+				:background-image url(/images/Index/Sub_menu/index_sub_05-01_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_05-01_sel.png) 
+			a.folder_2
+				:background-image url(/images/Index/Sub_menu/index_sub_05-02_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_05-02_sel.png) 
+			a.folder_3
+				:background-image url(/images/Index/Sub_menu/index_sub_05-03_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_05-03_sel.png) 
+			a.folder_4
+				:background-image url(/images/Index/Sub_menu/index_sub_05-04_nor.png) 
+				&.showing,
+				&:hover
+					:background-image url(/images/Index/Sub_menu/index_sub_05-04_sel.png) 
 #section
 	+clearfix
 	#rail
@@ -173,11 +359,9 @@
 						.owner_actions
 							:visibility visible
 #footer
-	:margin 50px 0
-	:text-align center
-	address
-		:color #7a7a7a
-
+	:width !full_width
+	:height 116px
+	:background url(/images/Index/Bottom/index_bottom_background.png) no-repeat 0 0
 
 form.edit_comment
 	textarea.text

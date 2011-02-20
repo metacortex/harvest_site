@@ -9,7 +9,7 @@ class CreateSections < ActiveRecord::Migration
       t.timestamps
     end
 
-		["제품소개", "시술 및 효능", "자료", "병원", "고객센터", "회사소개"].each do |section_name|
+		["제품소개", "시술 및 효능", "하비스트 관련자료", "시술 병원", "고객센터"].each do |section_name|
 			Section.create(:name => section_name)
 		end
   end

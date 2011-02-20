@@ -1,19 +1,20 @@
-<h1><%= link_to "하비스트", root_path, :class => "link" %></h1>
+<h1><%= link_to "하비스트", root_path, :class => "link", :hidefocus => "true" %></h1>
 
 <div class="top_actions">
 	<% if logged_in? %>
-		<%= @current_user.login %>님 안녕하세요
 		<%= link_to "로그아웃", logout_path, :class => "link" %>  
 		<%= link_to "계정설정", edit_user_path(@current_user.id), :class => "link" %> 
 		<%# link_to "회원탈퇴", user_path(@current_user.id), :remote => true, :method=> :delete, :confirm => "정말 탈퇴하시겠습니까?", :class => "link" %> 
 	<% else %>
-		<%= link_to "회원가입", new_user_path, :class => "link" %>
-		<%= link_to "로그인", login_path, :class => "link" %>
+		<%= link_to "로그인", login_path, :class => "link login", :hidefocus => "true" %>
+		<%= link_to "회원가입", new_user_path, :class => "link signup", :hidefocus => "true" %>
+		<%= link_to "공지사항", "", :class => "link announcement", :hidefocus => "true" %>
+		<%= link_to "회사소개", "", :class => "link company", :hidefocus => "true" %>
 	<% end %>
 </div>
 
 <div class="sections">
 	<% Section.all.each do |s| %>
-		<%= link_to s.name, section_path(s), :class => "link #{"showing" if !@section.blank? && @section == s}" %>
+		<%= link_to s.name, section_path(s), :hidefocus => "true", :class => "s_#{s.id} #{"showing" if !@section.blank? && @section == s}" %>
 	<% end %>
 </div>
