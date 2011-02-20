@@ -26,7 +26,8 @@
     font-weight: bold; }
   #header h1 {
     float: left;
-    background: url(/images/Index/Top/index_top_title.png) no-repeat 0 0; }
+    background: url(/images/Index/Top/index_top_title.png) no-repeat 0 0;
+    padding-bottom: 10px; }
     #header h1 a {
       display: block;
       width: 187px;
@@ -79,8 +80,8 @@
   #header #main_image {
     clear: both;
     width: 960px;
-    height: 510px;
-    background: url(/images/Index/Main/index_main.png) no-repeat 0 10px; }
+    height: 500px;
+    background: url(/images/Index/Main/index_main.png) no-repeat 0 0; }
     #header #main_image:after {
       content: ".";
       display: block;
@@ -238,24 +239,51 @@
       #header div.folders .section_5 a.folder_4.showing, #header div.folders .section_5 a.folder_4:hover {
         background-image: url(/images/Index/Sub_menu/index_sub_05-04_sel.png); }
 
-#section:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-#section {
-  display: inline-block; }
-* html #section {
-  height: 1%; }
-#section {
-  display: block; }
 #section #rail {
-  float: left;
-  width: 180px; }
+  width: 960px; }
   #section #rail form input.text,
   #section #rail form textarea.text {
-    width: 170px; }
+    width: 950px; }
+  #section #rail div.section_title a {
+    display: block;
+    width: 960px;
+    height: 80px;
+    background: url(/images/sub_page/sub_title_sample.png) no-repeat 0 0; }
+  #section #rail div.sub_pages {
+    background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_background.png) no-repeat 0 0; }
+    #section #rail div.sub_pages:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    #section #rail div.sub_pages {
+      display: inline-block; }
+    * html #section #rail div.sub_pages {
+      height: 1%; }
+    #section #rail div.sub_pages {
+      display: block; }
+    #section #rail div.sub_pages a {
+      display: block;
+      float: left;
+      width: 192px;
+      height: 20px;
+      text-align: center;
+      color: #999999; }
+      #section #rail div.sub_pages a:focus {
+        outline: none; }
+      #section #rail div.sub_pages a.f2_page_1 {
+        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_nor.png) no-repeat 50% 50%; }
+        #section #rail div.sub_pages a.f2_page_1.showing, #section #rail div.sub_pages a.f2_page_1:hover {
+          color: white; }
+      #section #rail div.sub_pages a.f2_page_2 {
+        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_nor.png) no-repeat 50% 50%; }
+        #section #rail div.sub_pages a.f2_page_2.showing, #section #rail div.sub_pages a.f2_page_2:hover {
+          color: white; }
+      #section #rail div.sub_pages a.f2_page_3 {
+        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_nor.png) no-repeat 50% 50%; }
+        #section #rail div.sub_pages a.f2_page_3.showing, #section #rail div.sub_pages a.f2_page_3:hover {
+          color: white; }
   #section #rail ul#folders li.folder {
     position: relative; }
     #section #rail ul#folders li.folder div.order_handle {
@@ -294,12 +322,11 @@
         #section #rail ul#folders li.folder ul.folder_items li.item a.item.showing {
           font-weight: bold; }
 #section #main_wrapper {
-  float: right;
-  width: 770px; }
+  width: 960px; }
   #section #main_wrapper form.new input.text {
-    width: 570px; }
+    width: 712.5px; }
   #section #main_wrapper form.new textarea.text {
-    width: 760px; }
+    width: 950px; }
   #section #main_wrapper .admin_actions {
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -338,7 +365,7 @@
         #section #main_wrapper div.board ul.posts li.post div.f.post_id {
           width: 30px; }
         #section #main_wrapper div.board ul.posts li.post div.f.post_title {
-          width: 440px;
+          width: 630px;
           text-align: left; }
         #section #main_wrapper div.board ul.posts li.post div.f.post_user {
           width: 140px; }
@@ -368,7 +395,7 @@
   #section #main_wrapper div.post div.comments {
     padding: 20px 0; }
     #section #main_wrapper div.post div.comments form.new_comment textarea.text {
-      width: 513.333px;
+      width: 640px;
       height: 54px; }
   #section #main_wrapper div.post ul#comments li.comment {
     padding: 10px 0;
@@ -395,11 +422,5 @@
   background: url(/images/Index/Bottom/index_bottom_background.png) no-repeat 0 0; }
 
 form.edit_comment textarea.text {
-  width: 513.333px;
+  width: 640px;
   height: 54px; }
-
-div.insert_html {
-  padding-bottom: 10px; }
-  div.insert_html textarea {
-    width: 513.333px;
-    height: 62px; }
