@@ -49,11 +49,11 @@ zlayer.prototype.render = function(content) {
 	this.script = "";
 	var html = content.replace(/[\r\n]+/gi, '');
 	var _m = null;
-	while(_m = /<script[^>]*>(.*?)(?:<\/script>)/gi.exec(html)) this.script += ";" + _m.last();
-	this.body.innerHTML = html; // + "<img src='/images/blank.gif' id='zlayer_watchdog'>";
-	this.positioning();
+	var _p = /<script[^>]*>(.*?)(?:<\/script>)/gi;
+	while(_m = _p.exec(html)) this.script += ";" + _m.last();
+	this.body.innerHTML = html + "<img src='/images/blank.gif' id='zlayer_watchdog' style='position:absolute;'>";
 
-	// this.waitWatchdog();
+	this.waitWatchdog();
 };
 
 zlayer.prototype.waitWatchdog = function() {
@@ -62,9 +62,9 @@ zlayer.prototype.waitWatchdog = function() {
 };
 
 zlayer.prototype.positioning = function() {
-	// if(!$('zlayer_watchdog').complete) {
-		// setTimeout(this.positioning.bind(this), 1000);
-	// } else {
+	if(!$('zlayer_watchdog').complete) {
+		setTimeout(this.positioning.bind(this), 1000);
+	} else {
 		var pt_dm = this.plate.getDimensions();
 		var vp_dm = document.viewport.getDimensions();
 		var vp_sc = document.viewport.getScrollOffsets();
@@ -84,5 +84,5 @@ zlayer.prototype.positioning = function() {
 		eval(this.script);
 		this.script = "";
 		zDone();
-	// }
+	}
 };

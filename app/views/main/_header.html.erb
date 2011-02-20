@@ -1,9 +1,9 @@
-<h1><%= link_to "하비스트", root_path, :class => "link", :hidefocus => "true" %></h1>
+<h1><%= link_to "하비스트", root_path, :hidefocus => "true" %></h1>
 
 <div class="top_actions">
 	<% if logged_in? %>
-		<%= link_to "로그아웃", logout_path, :class => "link" %>  
-		<%= link_to "계정설정", edit_user_path(@current_user.id), :class => "link" %> 
+		<%= link_to "로그아웃", logout_path %>  
+		<%= link_to "계정설정", edit_user_path(@current_user.id) %> 
 		<%# link_to "회원탈퇴", user_path(@current_user.id), :remote => true, :method=> :delete, :confirm => "정말 탈퇴하시겠습니까?", :class => "link" %> 
 	<% else %>
 		<%= link_to "로그인", login_path, :class => "login", :hidefocus => "true" %>
@@ -13,8 +13,20 @@
 	<% end %>
 </div>
 
+<%= content_tag(:div, "", :id => "main_image") if params[:controller] == "main" && params[:action] == "index" %>
+
 <div class="sections">
 	<% Section.all.each do |s| %>
 		<%= link_to s.name, section_path(s), :hidefocus => "true", :class => "s_#{s.id} #{"showing" if !@section.blank? && @section == s}" %>
+	<% end %>
+</div>
+
+<div class="folders">
+	<% Section.all.each_with_index do |s,i| %>
+		<div class="folder_container section_<%=i+1%>">
+			<% s.folders.sequence.each_with_index do |f,j| %>
+				<%= link_to f.name, [s, f], :class => "#{"showing" if !@folder.blank? && @folder == f} folder_#{j+1}", :hidefocus => "true" %>
+			<% end %>
+		</div>
 	<% end %>
 </div>

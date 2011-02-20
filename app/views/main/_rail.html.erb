@@ -1,4 +1,22 @@
 <div id="rail">
+	
+	<% if !@section.blank? %>
+		<div class="section_title">
+			<%= link_to @section.name, @section %>
+		</div>
+	<% end %>
+
+	<% if !@folder.blank? && @folder.has_multiple_items? %>
+		<div class="sub_pages">
+			<% @folder.pages.each_with_index do |pg,i| %>
+				<%= link_to pg.title, [@folder.section, @folder, pg], :hidefocus => "true", :class => "sub_page f#{@folder.id}_page_#{i+1} #{"showing" if !@page.blank? && @page == pg}" %>
+			<% end %>
+
+			<% @folder.boards.each do |b| %>
+				<%= link_to b.title, [@folder.section, @folder, b], :hidefocus => "true", :class => "sub_page f#{@folder.id}_board_#{i+1} #{"showing" if !@board.blank? && @board == b}" %>
+			<% end %>
+		</div>
+	<% end %>
 
 	<% if logged_in_as_admin? %>
 		<%= form_for [@section, @section.folders.new], :remote => true, :html => { :onsubmit => "zLoading();" } do |f| %>

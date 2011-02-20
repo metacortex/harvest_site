@@ -18,6 +18,7 @@
 	h1
 		:float left
 		:background url(/images/Index/Top/index_top_title.png) no-repeat 0 0
+		:padding-bottom !std_padding
 		a
 			:display block
 			:width !logo_width
@@ -63,8 +64,8 @@
 	#main_image
 		:clear both
 		:width !full_width
-		:height 500px + 10px
-		:background url(/images/Index/Main/index_main.png) no-repeat 0 10px
+		:height 500px
+		:background url(/images/Index/Main/index_main.png) no-repeat 0 0
 		+clearfix
 	div.sections
 		+clearfix
@@ -216,14 +217,45 @@
 				&:hover
 					:background-image url(/images/Index/Sub_menu/index_sub_05-04_sel.png) 
 #section
-	+clearfix
 	#rail
-		:float left
 		:width !rail_width
 		form
 			input.text,
 			textarea.text
 				:width = !rail_width - (!input_padding*2) - (!border_width*2)
+		div.section_title
+			a
+				:display block
+				:width !rail_width
+				:height 80px
+				:background url(/images/sub_page/sub_title_sample.png) no-repeat 0 0
+		div.sub_pages
+			+clearfix
+			:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_background.png) no-repeat 0 0
+			a
+				:display block
+				:float left
+				:width !folder_width
+				:height 20px
+				:text-align center
+				:color #999
+				&:focus
+					:outline none
+				&.f2_page_1
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_nor.png) no-repeat 50% 50%
+					&.showing,
+					&:hover
+						:color white
+				&.f2_page_2
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_nor.png) no-repeat 50% 50%
+					&.showing,
+					&:hover
+						:color white
+				&.f2_page_3
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_nor.png) no-repeat 50% 50%
+					&.showing,
+					&:hover
+						:color white
 		ul#folders
 			li.folder
 				:position relative
@@ -266,7 +298,6 @@
 							&.showing
 								:font-weight bold
 	#main_wrapper
-		:float right
 		:width !main_width
 		form.new
 			input.text

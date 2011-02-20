@@ -8,6 +8,10 @@ class Folder < ActiveRecord::Base
 
 	scope :sequence, :order => "position asc"
 
+	def has_multiple_items?
+		self.has_multiple_pages? || self.has_multiple_boards? || self.has_both_of_page_and_board?
+	end
+
 	def has_page?
 		self.pages_count > 0
 	end
@@ -18,6 +22,10 @@ class Folder < ActiveRecord::Base
 
 	def has_board?
 		self.boards_count > 0
+	end
+
+	def has_multiple_boards?
+		self.boards_count >= 2
 	end
 
 	def has_both_of_page_and_board?
