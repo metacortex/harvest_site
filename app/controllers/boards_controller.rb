@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class BoardsController < ApplicationController
 
 	before_filter :admin_required, :only => [ :new, :create, :edit, :update, :destory ]

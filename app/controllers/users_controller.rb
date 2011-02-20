@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class UsersController < ApplicationController
 
 	before_filter :login_required, :only => [ :edit, :update, :destroy ]

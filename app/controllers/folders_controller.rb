@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class FoldersController < ApplicationController
 
 	before_filter :admin_required, :only => [ :create, :edit, :update, :destroy, :sort ]

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class SectionsController < ApplicationController
 
 	after_filter	:store_location, :only => [ :show ]

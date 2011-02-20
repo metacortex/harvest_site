@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class CreateSections < ActiveRecord::Migration
   def self.up
     create_table :sections do |t|

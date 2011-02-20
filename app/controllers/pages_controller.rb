@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class PagesController < ApplicationController
 
 	before_filter :admin_required, :only => [ :new, :create, :edit, :update, :destroy ]

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Page < ActiveRecord::Base
 	validates_presence_of :title, :message => "제목을 입력해주세요"
 

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class User < ActiveRecord::Base
 
 	validates_presence_of     :email, :message => "이메일을 입력해주세요."
