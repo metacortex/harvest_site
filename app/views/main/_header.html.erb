@@ -6,10 +6,10 @@
 		<%= link_to "계정설정", edit_user_path(@current_user.id), :class => "link" %> 
 		<%# link_to "회원탈퇴", user_path(@current_user.id), :remote => true, :method=> :delete, :confirm => "정말 탈퇴하시겠습니까?", :class => "link" %> 
 	<% else %>
-		<%= link_to "로그인", login_path, :class => "link login", :hidefocus => "true" %>
-		<%= link_to "회원가입", new_user_path, :class => "link signup", :hidefocus => "true" %>
-		<%= link_to "공지사항", "", :class => "link announcement", :hidefocus => "true" %>
-		<%= link_to "회사소개", "", :class => "link company", :hidefocus => "true" %>
+		<%= link_to "로그인", login_path, :class => "login", :hidefocus => "true" %>
+		<%= link_to "회원가입", new_user_path, :class => "signup", :hidefocus => "true" %>
+		<%= link_to "공지사항", "", :class => "announcement", :hidefocus => "true" %>
+		<%= link_to "회사소개", "", :class => "company", :hidefocus => "true" %>
 	<% end %>
 </div>
 
