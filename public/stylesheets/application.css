@@ -336,8 +336,10 @@
     border-bottom: 1px solid #d7d7d7; }
     #section #main_wrapper .admin_actions a {
       margin-right: 10px; }
-  #section #main_wrapper div.page h5 {
-    padding-bottom: 10px; }
+  #section #main_wrapper div.page {
+    padding: 30px 60px; }
+    #section #main_wrapper div.page h5 {
+      padding-bottom: 10px; }
   #section #main_wrapper div.board h5 {
     padding-bottom: 10px; }
   #section #main_wrapper div.board ul.posts {
