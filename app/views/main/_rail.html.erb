@@ -2,7 +2,7 @@
 	
 	<% if !@section.blank? %>
 		<div class="section_title">
-			<%= link_to @section.name, @section %>
+			<%= link_to " ", @section %>
 		</div>
 	<% end %>
 
@@ -34,9 +34,6 @@
 		<% end %>
 	<% end %>
 
-	<ul id="folders" class="list_on_rail">
-		<%= render @section.folders.sequence %>
-	</ul>
 	<%= javascript_tag("initSortableFolders();") if logged_in_as_admin? %>
 
 </div>
