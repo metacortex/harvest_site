@@ -33,6 +33,8 @@ class FoldersController < ApplicationController
 	def show
 		if @folder.has_page?
 			redirect_to [@section, @folder, @folder.pages.first]
+		elsif @folder.has_board?
+		  redirect_to [@section, @folder, @folder.boards.first]
 		end
 	end
 
