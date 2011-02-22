@@ -2,8 +2,13 @@
 class PostsController < ApplicationController
 
 	before_filter :login_required, :only => [ :new, :create, :edit, :update, :destory ]
+	before_filter :admin_required, :only => [ :new, :create, :edit, :update, :destory ], :if => :is_notice_board
 	before_filter :find_supers
 	after_filter	:store_location, :only => [ :show ]
+
+	def is_notice_board
+		NoticeBoardIDs.include? params[:board_id].to_i
+	end
 
 	def new
 		@post = @board.posts.new(:section_id => @section.id, :folder_id => @folder.id)

@@ -17,7 +17,10 @@
 		</ul>
 
 		<div class="toolbar">
-			<%= link_to "글쓰기", new_section_folder_board_post_path(@section, @folder, @board), :class => "link" %>
+			<% if (@board.is_admin_only? && logged_in_as_admin?) || !@board.is_admin_only? %>
+				<%= link_to "글쓰기", new_section_folder_board_post_path(@section, @folder, @board), :class => "link" %>
+			<% end %>
+
 			<% form_tag '', :method => :get, :class => 'search' do %>
 				<div class="field">
 					<%= text_field_tag :q, "", :class => "text" %>

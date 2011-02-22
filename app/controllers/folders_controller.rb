@@ -36,6 +36,10 @@ class FoldersController < ApplicationController
 		elsif @folder.has_board?
 		  redirect_to [@section, @folder, @folder.boards.first]
 		end
+
+		if @folder.id == 10
+			render :template => "/main/new_question"
+		end
 	end
 
 	def edit

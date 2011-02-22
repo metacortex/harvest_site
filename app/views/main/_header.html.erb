@@ -8,9 +8,10 @@
 	<% else %>
 		<%= link_to "로그인", login_path, :class => "login", :hidefocus => "true" %>
 		<%= link_to "회원가입", new_user_path, :class => "signup", :hidefocus => "true" %>
-		<%= link_to "공지사항", "", :class => "announcement", :hidefocus => "true" %>
-		<%= link_to "회사소개", "", :class => "company", :hidefocus => "true" %>
 	<% end %>
+
+	<%= link_to "공지사항", "", :class => "announcement", :hidefocus => "true" %>
+	<%= link_to "회사소개", "", :class => "company", :hidefocus => "true" %>
 </div>
 
 <%= content_tag(:div, "", :id => "main_image") if params[:controller] == "main" && params[:action] == "index" %>

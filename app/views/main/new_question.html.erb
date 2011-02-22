@@ -1,0 +1,53 @@
+<%= render :partial => '/main/rail' %>
+
+<div id="main_wrapper">
+	<div class="main_container">
+
+		<%= form_for '', :url => question_path, :html => { :multipart => true, :class => "new_question", :onsubmit => "zLoading();" } do |f| %>
+
+			<div class="field">
+				<%= f.text_field :title, :class => "text control_placeholder", :placeholder => "제목..", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :name, :class => "text control_placeholder", :placeholder => "이름", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :email, :class => "text control_placeholder", :placeholder => "이메일", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :phone, :class => "text control_placeholder", :placeholder => "연락처", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.label :attachment, "파일첨부" %>
+				<%= f.file_field :attachment, :class => "file" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_area :content, :class => "text" %>
+			</div>
+
+			<div class="actions">
+				<%= submit_tag("메일발송", :class => "zButton") %>
+				<%= cancel_to %>
+			</div>
+
+		<% end %>
+
+
+	</div>
+	<div class="main_bottom"></div>
+
+</div>
+
+
+
+
+
+
+
+
+
