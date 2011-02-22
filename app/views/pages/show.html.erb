@@ -1,12 +1,15 @@
 <%= render :partial => '/main/rail' %>
 
 <div id="main_wrapper">
-	<%= admin_actions("#{link_to("페이지수정", edit_section_folder_page_path(@section, @folder, @page), :class => "link")}") %>
+	<div class="main_container">
+		<%= admin_actions("#{link_to("페이지수정", edit_section_folder_page_path(@section, @folder, @page), :class => "link")}") %>
 
-	<div class="page">
-<!--		<h5><%= @page.title %></h5> -->
-		<div class="page_content">
-			<%= nl2br(@page.content) %>
+		<div class="page">
+	<!--		<h5><%= @page.title %></h5> -->
+			<div class="page_content">
+				<%= nl2br(@page.content) %>
+			</div>
 		</div>
 	</div>
+	<div class="main_bottom"></div>
 </div>

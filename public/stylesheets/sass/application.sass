@@ -229,12 +229,41 @@
 			input.text,
 			textarea.text
 				:width = !rail_width - (!input_padding*2) - (!border_width*2)
-		div.section_title
+		div.folder_title
 			a
 				:display block
 				:width !rail_width
 				:height 80px
-				:background url(/images/sub_page/sub_title_sample.png) no-repeat 0 0
+				&.ft_1
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_01_01.png) no-repeat 0 0
+				&.ft_2
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_01_02.png) no-repeat 0 0
+				&.ft_3
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_01_03.png) no-repeat 0 0
+				&.ft_11
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_02_01.png) no-repeat 0 0
+				&.ft_12
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_02_02.png) no-repeat 0 0
+				&.ft_13
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_02_03.png) no-repeat 0 0
+				&.ft_14
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_02_04.png) no-repeat 0 0
+				&.ft_15
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_03_01.png) no-repeat 0 0
+				&.ft_4
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_03_01.png) no-repeat 0 0
+				&.ft_5
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_03_02.png) no-repeat 0 0
+				&.ft_6
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_03_03.png) no-repeat 0 0
+				&.ft_7
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_04_01.png) no-repeat 0 0
+				&.ft_8
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_04_02.png) no-repeat 0 0
+				&.ft_9
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_05_01.png) no-repeat 0 0
+				&.ft_10
+					:background url(/images/sub_page/sub_2depth_titles/sub_2depth_title_05_02.png) no-repeat 0 0
 		div.sub_pages
 			+clearfix
 			:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_background.png) no-repeat 0 0
@@ -242,29 +271,71 @@
 				:display block
 				:float left
 				:width !folder_width
-				:height 20px
+				:height 30px
 				:text-align center
 				:color #999
 				&:focus
 					:outline none
 				&.f2_page_1
-					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_nor.png) no-repeat 50% 50%
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_02_01_nor.png) no-repeat 50% 50%
 					:text-indent -9999em
 					&.showing,
 					&:hover
-						:color white
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_02_01_sel.png) no-repeat 50% 50%
 				&.f2_page_2
-					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_nor.png) no-repeat 50% 50%
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_02_02_nor.png) no-repeat 50% 50%
 					:text-indent -9999em
 					&.showing,
 					&:hover
-						:color white
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_02_02_sel.png) no-repeat 50% 50%
 				&.f2_page_3
-					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_nor.png) no-repeat 50% 50%
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_02_03_nor.png) no-repeat 50% 50%
 					:text-indent -9999em
 					&.showing,
 					&:hover
-						:color white
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_02_03_sel.png) no-repeat 50% 50%
+				&.f3_page_1
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_03_01_nor.png) no-repeat 50% 50%
+					:text-indent -9999em
+					&.showing,
+					&:hover
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_03_01_sel.png) no-repeat 50% 50%
+				&.f3_page_2
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_03_02_nor.png) no-repeat 50% 50%
+					:text-indent -9999em
+					&.showing,
+					&:hover
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_03_02_sel.png) no-repeat 50% 50%
+				&.f14_page_1
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_04_01_nor.png) no-repeat 50% 50%
+					:text-indent -9999em
+					&.showing,
+					&:hover
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_04_01_sel.png) no-repeat 50% 50%
+				&.f14_page_2
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_04_02_nor.png) no-repeat 50% 50%
+					:text-indent -9999em
+					&.showing,
+					&:hover
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_04_02_sel.png) no-repeat 50% 50%
+				&.f14_page_3
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_04_03_nor.png) no-repeat 50% 50%
+					:text-indent -9999em
+					&.showing,
+					&:hover
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_04_03_sel.png) no-repeat 50% 50%
+				&.f6_page_1
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_03_01_nor.png) no-repeat 50% 50%
+					:text-indent -9999em
+					&.showing,
+					&:hover
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_03_01_sel.png) no-repeat 50% 50%
+				&.f6_page_2
+					:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_03_02_nor.png) no-repeat 50% 50%
+					:text-indent -9999em
+					&.showing,
+					&:hover
+						:background url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_03_02_sel.png) no-repeat 50% 50%
 		ul#folders
 			li.folder
 				:position relative
@@ -308,6 +379,14 @@
 								:font-weight bold
 	#main_wrapper
 		:width !main_width
+		:background url(/images/sub_page/main/sub_main_background_top.png) no-repeat 0 0
+		:padding-top 60px
+		.main_container
+			:background url(/images/sub_page/main/sub_main_background_center.png) repeat-y 0 0
+			:padding 0 30px
+		.main_bottom
+			:padding-top 60px
+			:background url(/images/sub_page/main/sub_main_background_bottom.png) no-repeat 0 0
 		form.new
 			input.text
 				:width (!main_width - (!input_padding*2) - (!border_width*2)) / 4 * 3
@@ -320,7 +399,6 @@
 			a
 				:margin-right !std_padding
 		div.page
-			:padding 30px 60px
 			h5
 				:padding-bottom !std_padding
 			div.page_content

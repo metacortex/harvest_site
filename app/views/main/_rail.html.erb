@@ -1,8 +1,8 @@
 <div id="rail">
 	
-	<% if !@section.blank? %>
-		<div class="section_title">
-			<%= link_to " ", @section %>
+	<% if !@section.blank? && !@folder.blank? %>
+		<div class="folder_title">
+			<%= link_to "", @section, :class => "ft_#{@folder.id}" %>
 		</div>
 	<% end %>
 
@@ -37,4 +37,3 @@
 	<%= javascript_tag("initSortableFolders();") if logged_in_as_admin? %>
 
 </div>
-
