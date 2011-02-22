@@ -38,9 +38,7 @@
         outline: none; }
   #header div.top_actions {
     float: right;
-    position: absolute;
-    right: -7px;
-    top: 95px; }
+    margin-top: 40px; }
     #header div.top_actions:after {
       content: ".";
       display: block;
