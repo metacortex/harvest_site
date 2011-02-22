@@ -405,6 +405,28 @@
       margin-right: 10px; }
   #section #main_wrapper div.page h5 {
     padding-bottom: 10px; }
+  #section #main_wrapper div.page div.page_content div.movies:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #section #main_wrapper div.page div.page_content div.movies {
+    display: inline-block; }
+  * html #section #main_wrapper div.page div.page_content div.movies {
+    height: 1%; }
+  #section #main_wrapper div.page div.page_content div.movies {
+    display: block; }
+  #section #main_wrapper div.page div.page_content div.movies div.movies_title {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 0 20px 10px; }
+  #section #main_wrapper div.page div.page_content div.movies div.movie {
+    width: 280px;
+    padding: 10px 10px 40px 10px;
+    float: left; }
+    #section #main_wrapper div.page div.page_content div.movies div.movie div.caption {
+      height: 36px; }
   #section #main_wrapper div.board h5 {
     padding-bottom: 10px; }
   #section #main_wrapper div.board ul.posts {
