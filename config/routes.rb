@@ -20,5 +20,8 @@ Harvest::Application.routes.draw do
 	
 	match "editor/:action", :controller => :editor, :as => :editor, :via => [:get, :post]
 
+	match 'new_question' => "main#new_question", :as => 'new_question'
+	match 'question' => "main#question", :via => [:post], :as => 'question'
+
 	root :to => "main#index"	
 end
