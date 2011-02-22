@@ -166,84 +166,78 @@
           display: block;
           width: 192px;
           text-indent: -9999px;
-          margin-bottom: 1px;
-          height: 22px;
-          background: url(/images/blank.gif) no-repeat 50% 50%; }
+          height: 23px;
+          background: url(/images/Index/Sub_menu/index_sub_set.png) no-repeat 0 0; }
           #header div.sections div.section .folder_container a:focus {
             outline: none; }
       #header div.sections div.section .section_1 a.folder_1 {
-        height: 23px;
-        background-image: url(/images/Index/Sub_menu/index_sub_01-01_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat 0px 0px; }
         #header div.sections div.section .section_1 a.folder_1.showing, #header div.sections div.section .section_1 a.folder_1:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_01-01_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat 0px -120px; }
       #header div.sections div.section .section_1 a.folder_2 {
-        background-image: url(/images/Index/Sub_menu/index_sub_01-02_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat 0px -23px; }
         #header div.sections div.section .section_1 a.folder_2.showing, #header div.sections div.section .section_1 a.folder_2:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_01-02_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat 0px -143px; }
       #header div.sections div.section .section_1 a.folder_3 {
-        background-image: url(/images/Index/Sub_menu/index_sub_01-03_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat 0px -46px; }
         #header div.sections div.section .section_1 a.folder_3.showing, #header div.sections div.section .section_1 a.folder_3:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_01-03_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat 0px -166px; }
       #header div.sections div.section .section_2 a.folder_1 {
-        height: 23px;
-        background-image: url(/images/Index/Sub_menu/index_sub_02-01_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px 0px; }
         #header div.sections div.section .section_2 a.folder_1.showing, #header div.sections div.section .section_2 a.folder_1:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_02-01_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px -120px; }
       #header div.sections div.section .section_2 a.folder_2 {
-        background-image: url(/images/Index/Sub_menu/index_sub_02-02_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px -23px; }
         #header div.sections div.section .section_2 a.folder_2.showing, #header div.sections div.section .section_2 a.folder_2:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_02-02_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px -143px; }
       #header div.sections div.section .section_2 a.folder_3 {
-        background-image: url(/images/Index/Sub_menu/index_sub_02-03_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px -46px; }
         #header div.sections div.section .section_2 a.folder_3.showing, #header div.sections div.section .section_2 a.folder_3:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_02-03_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px -166px; }
       #header div.sections div.section .section_2 a.folder_4 {
-        background-image: url(/images/Index/Sub_menu/index_sub_02-04_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px -69px; }
         #header div.sections div.section .section_2 a.folder_4.showing, #header div.sections div.section .section_2 a.folder_4:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_02-04_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -192px -189px; }
       #header div.sections div.section .section_3 a.folder_1 {
-        height: 23px;
-        background-image: url(/images/Index/Sub_menu/index_sub_03-01_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px 0px; }
         #header div.sections div.section .section_3 a.folder_1.showing, #header div.sections div.section .section_3 a.folder_1:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_03-01_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px -120px; }
       #header div.sections div.section .section_3 a.folder_2 {
-        background-image: url(/images/Index/Sub_menu/index_sub_03-02_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px -23px; }
         #header div.sections div.section .section_3 a.folder_2.showing, #header div.sections div.section .section_3 a.folder_2:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_03-02_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px -143px; }
       #header div.sections div.section .section_3 a.folder_3 {
-        background-image: url(/images/Index/Sub_menu/index_sub_03-03_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px -46px; }
         #header div.sections div.section .section_3 a.folder_3.showing, #header div.sections div.section .section_3 a.folder_3:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_03-03_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px -166px; }
       #header div.sections div.section .section_3 a.folder_4 {
-        background-image: url(/images/Index/Sub_menu/index_sub_03-04_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px -69px; }
         #header div.sections div.section .section_3 a.folder_4.showing, #header div.sections div.section .section_3 a.folder_4:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_03-04_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -384px -189px; }
       #header div.sections div.section .section_4 a.folder_1 {
-        height: 23px;
-        background-image: url(/images/Index/Sub_menu/index_sub_04-01_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -576px 0px; }
         #header div.sections div.section .section_4 a.folder_1.showing, #header div.sections div.section .section_4 a.folder_1:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_04-01_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -576px -120px; }
       #header div.sections div.section .section_4 a.folder_2 {
-        background-image: url(/images/Index/Sub_menu/index_sub_04-02_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -576px -23px; }
         #header div.sections div.section .section_4 a.folder_2.showing, #header div.sections div.section .section_4 a.folder_2:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_04-02_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -576px -143px; }
       #header div.sections div.section .section_5 a.folder_1 {
-        height: 23px;
-        background-image: url(/images/Index/Sub_menu/index_sub_05-01_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px 0px; }
         #header div.sections div.section .section_5 a.folder_1.showing, #header div.sections div.section .section_5 a.folder_1:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_05-01_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px -120px; }
       #header div.sections div.section .section_5 a.folder_2 {
-        background-image: url(/images/Index/Sub_menu/index_sub_05-02_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px -23px; }
         #header div.sections div.section .section_5 a.folder_2.showing, #header div.sections div.section .section_5 a.folder_2:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_05-02_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px -143px; }
       #header div.sections div.section .section_5 a.folder_3 {
-        background-image: url(/images/Index/Sub_menu/index_sub_05-03_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px -46px; }
         #header div.sections div.section .section_5 a.folder_3.showing, #header div.sections div.section .section_5 a.folder_3:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_05-03_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px -166px; }
       #header div.sections div.section .section_5 a.folder_4 {
-        background-image: url(/images/Index/Sub_menu/index_sub_05-04_nor.png); }
+        background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px -69px; }
         #header div.sections div.section .section_5 a.folder_4.showing, #header div.sections div.section .section_5 a.folder_4:hover {
-          background-image: url(/images/Index/Sub_menu/index_sub_05-04_sel.png); }
+          background: url("/images/Index/Sub_menu/index_sub_set.png") no-repeat -768px -189px; }
 
 #section #rail {
   width: 960px; }
@@ -557,8 +551,30 @@
 #footer {
   width: 960px;
   height: 212px;
-  background: url(/images/Index/Bottom/index_bottom_background.png) no-repeat 0 0; }
-  #footer a {
+  background: url(/images/Index/Bottom/index_bottom_background.png) no-repeat 0 0;
+  position: relative; }
+  #footer ul#family_sites {
+    position: absolute;
+    width: 176px;
+    left: 502px;
+    top: 90px;
+    border: 1px solid #dbdbd9;
+    height: 50px;
+    background: #f0f1ec; }
+    #footer ul#family_sites li {
+      height: 25px;
+      line-height: 25px;
+      padding: 0 5px; }
+      #footer ul#family_sites li a {
+        color: #545550; }
+  #footer a.family_site {
+    display: block;
+    width: 178px;
+    height: 18px;
+    position: absolute;
+    left: 502px;
+    top: 142px; }
+  #footer a.overlay {
     position: relative;
     top: 185px; }
 

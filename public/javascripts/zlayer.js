@@ -59,7 +59,7 @@ zlayer.prototype.render = function(content) {
 };
 
 zlayer.prototype.positioning = function() {
-	var pt_dm = this.plate.getDimensions();
+	var pt_dm = $(this.plate).getDimensions();
 	var vp_dm = document.viewport.getDimensions();
 	var vp_sc = document.viewport.getScrollOffsets();
 
