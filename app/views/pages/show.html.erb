@@ -7,7 +7,15 @@
 		<div class="page">
 	<!--		<h5><%= @page.title %></h5> -->
 			<div class="page_content">
-				<%= @page.content.html_safe %>
+
+				<% if @page.id == 4 %>
+					<%# @page.content.html_safe %>
+					<%# @page.content.gsub(/[\r\n]/,'').gsub(/&lt;iframe.*?\/iframe&gt;/, "youtube").html_safe %>
+					<%= @page.content.gsub(/height=\"390\"/,"height='240'").gsub(/width=\"(480|640)\"/,"width='280'").gsub(/&lt;/,"<").gsub('&gt;',">").html_safe %>
+				<% else %>
+					<%= @page.content.html_safe %>
+				<% end %>
+
 			</div>
 		</div>
 	</div>
