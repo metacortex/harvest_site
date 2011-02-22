@@ -7,7 +7,7 @@
 		<div class="page">
 	<!--		<h5><%= @page.title %></h5> -->
 			<div class="page_content">
-				<%= nl2br(@page.content) %>
+				<%= @page.content.html_safe %>
 			</div>
 		</div>
 	</div>

@@ -3,6 +3,8 @@
 <div id="main_wrapper">
 	<%= admin_actions("#{link_to_function "게시판이름변경", "zLayer.open(event, '#{edit_section_folder_board_path(@section, @folder, @board)}')", :class => "link"}") %>
 
+	<div class="main_container">
+
 	<div class="board">
 		<h5><%= @board.title %></h5>
 
@@ -19,5 +21,8 @@
 		</div>
 
 	</div>
+
+	</div>
+	<div class="main_bottom"></div>
 
 </div>

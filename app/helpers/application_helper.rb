@@ -28,7 +28,7 @@ module ApplicationHelper
 	end
 
 	def nl2br(text)
-		text.gsub(/[\n]/, " <br/>").html_safe
+		text.gsub(/[\n]/, "<br/>").html_safe
 	end
 
 	def br2space(text)

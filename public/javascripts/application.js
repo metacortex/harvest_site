@@ -10,7 +10,7 @@ function show_folder_container(id) {
 		fc.hide();
 	});
 
-	if($(dom_id).style.display == "none") Effect.BlindDown(dom_id, {duration:0.5});
+	if($(dom_id).style.display == "none") Effect.BlindDown(dom_id, {duration:0.2});
 };
 
 function mOver(n) { $(n).addClassName("hover"); };

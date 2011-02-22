@@ -29,7 +29,7 @@ class BoardsController < ApplicationController
 		@board = Board.find(params[:id])
 		@title = @board.title
 
-		@posts = @board.posts.paginate(:page => params[:page], :order => "id desc", :per_page => Post.per_page)
+		@posts = @board.posts.paginate(:page => params[:page], :order => "created_at desc", :per_page => Post.per_page)
 	end
 
 	def edit
