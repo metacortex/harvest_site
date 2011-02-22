@@ -149,7 +149,8 @@
         width: 192px;
         height: 96px;
         padding-top: 2px;
-        position: absolute; }
+        position: absolute;
+        z-index: 5001; }
         #header div.sections div.section .folder_container a {
           display: block;
           width: 192px;
@@ -493,3 +494,36 @@
 form.edit_comment textarea.text {
   width: 640px;
   height: 54px; }
+
+div.login_form_wrapper {
+  width: 307px;
+  height: 240px;
+  background: url(/images/sub_page/main/sub_main_Login_area.png) no-repeat 0 0;
+  margin: 60px auto;
+  position: relative;
+  padding: 0 63px 0 50px; }
+  div.login_form_wrapper form {
+    padding: 75px 0 0 60px; }
+    div.login_form_wrapper form .field {
+      padding: 19px 0 0 0; }
+    div.login_form_wrapper form .actions {
+      padding-top: 10px; }
+
+div.signup_form_wrapper {
+  width: 307px;
+  height: 280px;
+  background: url(/images/sub_page/main/sub_main_join_area.png) no-repeat 0 0;
+  margin: 60px auto 0;
+  position: relative;
+  padding: 0 63px 0 50px; }
+  div.signup_form_wrapper form {
+    padding: 54px 0 0 60px; }
+    div.signup_form_wrapper form .field {
+      padding: 10px 0 0 0; }
+    div.signup_form_wrapper form .actions {
+      padding-top: 10px; }
+
+div#error_explanation {
+  width: 420px;
+  margin: 0 auto;
+  padding-top: 30px; }

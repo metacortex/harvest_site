@@ -1,40 +1,38 @@
-<h3>회원가입</h3>
 
+<div class="signup_form_wrapper">
 <%= form_for @user, :html => { :onsubmit => "zLoading();" } do |f| %>
 
-	<% if @user.errors.any? %>
-	<div id="error_explanation">
-		<h4><%= @user.errors.count %>개의 문제가 있습니다.</h4>
-
-		<ul>
-			<% @user.errors.full_messages.each do |msg| %>
-				<li><%= msg.gsub(/^[-_a-zA-Z0-9]+\s/,'') %></li>
-			<% end %>
-		</ul>
-	</div>
-	<% end %>
-
 	<div class="field">
-		<%= f.label :email, '이메일' %>
 		<%= f.text_field :email, :class => "text smart_focus" %>
 	</div>
 
 	<div class="field">
-		<%= f.label :password, '비밀번호' %>
 		<%= f.password_field :password, :class => "text", :value => "", :autocomplete => "off" %>
 	</div>
 
 	<div class="field">
-		<%= f.label :password_confirmation, '암호확인' %>
 		<%= f.password_field :password_confirmation, :class => "text" %>
 	</div>
 
 	<div class="field">
-		<%= f.label :login, '아이디' %>
 		<%= f.text_field :login, :class => "text" %>
 	</div>
+
 	<div class="actions">
-		<%= submit_tag("계정설정", :class => "zButton") %>
+		<%= submit_tag("계정설정", :class => "zButton right") %>
 	</div>
 	
 <% end %>	
+</div>
+
+<% if @user.errors.any? %>
+<div id="error_explanation">
+	<h4><%= @user.errors.count %>개의 문제가 있습니다.</h4>
+
+	<ul>
+		<% @user.errors.full_messages.each do |msg| %>
+			<li><%= msg.gsub(/^[-_a-zA-Z0-9]+\s/,'') %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
