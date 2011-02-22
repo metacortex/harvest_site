@@ -1,8 +1,6 @@
 # encoding: UTF-8
 class MainController < ApplicationController
 
-	layout 'main'
-
 	def question
 		Thread.new do
 			UserMailer.question(params).deliver

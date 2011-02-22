@@ -20,8 +20,13 @@
 		</div>
 
 		<div id="footer">
-			<%= link_to_function image_tag('Index/Bottom/index_bottom_menu_01.png'), "zLayer.open('/privacy.html?s=auto')" %>
-			<%= link_to_function image_tag('Index/Bottom/index_bottom_menu_02.png'), "zLayer.open('/agreement.html?s=auto')" %>
+			<ul id="family_sites" style="display:none" class="fragile do_hide">
+				<li><%= link_to "하비스트 US", "http://www.harvesttech.com", :class => "link" %></li>
+				<li><%= link_to "(주)미라", "http://mirarush.com", :class => "link" %></li>
+			</ul>
+			<%= link_to_function "", "$('family_sites').show()", :class => "family_site" %>
+			<%= link_to_function image_tag('Index/Bottom/index_bottom_menu_01.png'), "zLayer.open('/privacy.html?s=auto')", :class => "overlay" %>
+			<%= link_to_function image_tag('Index/Bottom/index_bottom_menu_02.png'), "zLayer.open('/agreement.html?s=auto')", :class => "overlay" %>
 		</div>
 	</div>
 
