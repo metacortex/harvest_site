@@ -273,15 +273,18 @@
       #section #rail div.sub_pages a:focus {
         outline: none; }
       #section #rail div.sub_pages a.f2_page_1 {
-        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_nor.png) no-repeat 50% 50%; }
+        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_01_nor.png) no-repeat 50% 50%;
+        text-indent: -9999em; }
         #section #rail div.sub_pages a.f2_page_1.showing, #section #rail div.sub_pages a.f2_page_1:hover {
           color: white; }
       #section #rail div.sub_pages a.f2_page_2 {
-        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_nor.png) no-repeat 50% 50%; }
+        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_02_nor.png) no-repeat 50% 50%;
+        text-indent: -9999em; }
         #section #rail div.sub_pages a.f2_page_2.showing, #section #rail div.sub_pages a.f2_page_2:hover {
           color: white; }
       #section #rail div.sub_pages a.f2_page_3 {
-        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_nor.png) no-repeat 50% 50%; }
+        background: url(/images/sub_page/sub_3depth_menu/sub_3depth_menu_03_nor.png) no-repeat 50% 50%;
+        text-indent: -9999em; }
         #section #rail div.sub_pages a.f2_page_3.showing, #section #rail div.sub_pages a.f2_page_3:hover {
           color: white; }
   #section #rail ul#folders li.folder {
@@ -333,8 +336,10 @@
     border-bottom: 1px solid #d7d7d7; }
     #section #main_wrapper .admin_actions a {
       margin-right: 10px; }
-  #section #main_wrapper div.page h5 {
-    padding-bottom: 10px; }
+  #section #main_wrapper div.page {
+    padding: 30px 60px; }
+    #section #main_wrapper div.page h5 {
+      padding-bottom: 10px; }
   #section #main_wrapper div.board h5 {
     padding-bottom: 10px; }
   #section #main_wrapper div.board ul.posts {
