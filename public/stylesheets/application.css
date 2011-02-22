@@ -3,7 +3,8 @@
   margin: 0 auto; }
 
 #header {
-  padding-top: 50px; }
+  padding-top: 50px;
+  position: relative; }
   #header:after {
     content: ".";
     display: block;
@@ -36,7 +37,10 @@
       #header h1 a:focus {
         outline: none; }
   #header div.top_actions {
-    float: right; }
+    float: right;
+    position: absolute;
+    right: -7px;
+    top: 95px; }
     #header div.top_actions:after {
       content: ".";
       display: block;
@@ -395,10 +399,18 @@
   #section #main_wrapper .main_bottom {
     padding-top: 60px;
     background: url(/images/sub_page/main/sub_main_background_bottom.png) no-repeat 0 0; }
+  #section #main_wrapper form.new_question {
+    width: 480px;
+    margin: 0 auto; }
+    #section #main_wrapper form.new_question input.text {
+      width: 333.75px; }
+    #section #main_wrapper form.new_question textarea.text {
+      width: 445px;
+      height: 220px; }
   #section #main_wrapper form.new input.text {
-    width: 712.5px; }
+    width: 667.5px; }
   #section #main_wrapper form.new textarea.text {
-    width: 950px; }
+    width: 890px; }
   #section #main_wrapper .admin_actions {
     padding-bottom: 5px;
     margin-bottom: 10px;

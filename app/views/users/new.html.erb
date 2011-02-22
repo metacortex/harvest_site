@@ -7,15 +7,15 @@
 	</div>
 
 	<div class="field">
+		<%= f.text_field :login, :class => "text" %>
+	</div>
+
+	<div class="field">
 		<%= f.password_field :password, :class => "text", :value => "", :autocomplete => "off" %>
 	</div>
 
 	<div class="field">
 		<%= f.password_field :password_confirmation, :class => "text" %>
-	</div>
-
-	<div class="field">
-		<%= f.text_field :login, :class => "text" %>
 	</div>
 
 	<div class="actions">

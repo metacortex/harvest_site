@@ -7,6 +7,7 @@
 #header
 	:padding-top 50px
 	+clearfix
+	:position relative
 	#alert
 		:position absolute
 		:width !full_width
@@ -29,6 +30,9 @@
 	div.top_actions
 		:float right
 		+clearfix
+		:position absolute
+		:right -7px
+		:top 95px
 		a
 			:display block
 			:float left
@@ -390,11 +394,19 @@
 		.main_bottom
 			:padding-top 60px
 			:background url(/images/sub_page/main/sub_main_background_bottom.png) no-repeat 0 0
+		form.new_question
+			:width !main_width / 2
+			:margin 0 auto
+			input.text
+				:width (!main_width - (!input_padding*2) - (!border_width*2) - 60px) / 4 * 3 / 2
+			textarea.text
+				:width (!main_width - (!input_padding*2) - (!border_width*2) - 60px) / 2
+				:height 220px
 		form.new
 			input.text
-				:width (!main_width - (!input_padding*2) - (!border_width*2)) / 4 * 3
+				:width (!main_width - (!input_padding*2) - (!border_width*2) - 60px) / 4 * 3
 			textarea.text
-				:width !main_width - (!input_padding*2) - (!border_width*2)
+				:width !main_width - (!input_padding*2) - (!border_width*2) - 60px
 		.admin_actions
 			:padding-bottom !std_margin
 			:margin-bottom !std_padding
