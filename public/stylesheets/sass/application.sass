@@ -91,34 +91,18 @@
 				:width !folder_width
 				:height 40px
 				:text-indent -9999px
-				:background url(/images/Index/Navi_menu/index_navi_set.png) no-repeat 0 0
 				&:focus
 					:outline none
 				&.s_1
-					:background-position 0 0
-					&.showing,
-					&:hover
-						:background-position 0 -40px
+					+image_tab_nav("/images/Index/Navi_menu/index_navi_set.png", -192px * 0, 40px * 0, 40px)
 				&.s_2
-					:background-position -192px 0
-					&.showing,
-					&:hover
-						:background-position -192px -40px
+					+image_tab_nav("/images/Index/Navi_menu/index_navi_set.png", -192px * 1, 40px * 0, 40px)
 				&.s_3
-					:background-position -192px*2 0
-					&.showing,
-					&:hover
-						:background-position -192px*2 -40px
+					+image_tab_nav("/images/Index/Navi_menu/index_navi_set.png", -192px * 2, 40px * 0, 40px)
 				&.s_4
-					:background-position -192px*3 0
-					&.showing,
-					&:hover
-						:background-position -192px*3 -40px
+					+image_tab_nav("/images/Index/Navi_menu/index_navi_set.png", -192px * 3, 40px * 0, 40px)
 				&.s_5
-					:background-position -192px*4 0
-					&.showing,
-					&:hover
-						:background-position -192px*4 -40px
+					+image_tab_nav("/images/Index/Navi_menu/index_navi_set.png", -192px * 4, 40px * 0, 40px)
 			.folder_container
 				:background url(/images/Index/Sub_menu/index_sub_background.png) no-repeat 0 0
 				:width !folder_width

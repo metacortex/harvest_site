@@ -132,6 +132,27 @@
         #header div.sections div.section a.section:focus {
           outline: none; }
         #header div.sections div.section a.section.s_1 {
+<<<<<<< HEAD
+          background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat 0px 0px; }
+          #header div.sections div.section a.section.s_1.showing, #header div.sections div.section a.section.s_1:hover {
+            background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat 0px -40px; }
+        #header div.sections div.section a.section.s_2 {
+          background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -192px 0px; }
+          #header div.sections div.section a.section.s_2.showing, #header div.sections div.section a.section.s_2:hover {
+            background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -192px -40px; }
+        #header div.sections div.section a.section.s_3 {
+          background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -384px 0px; }
+          #header div.sections div.section a.section.s_3.showing, #header div.sections div.section a.section.s_3:hover {
+            background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -384px -40px; }
+        #header div.sections div.section a.section.s_4 {
+          background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -576px 0px; }
+          #header div.sections div.section a.section.s_4.showing, #header div.sections div.section a.section.s_4:hover {
+            background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -576px -40px; }
+        #header div.sections div.section a.section.s_5 {
+          background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -768px 0px; }
+          #header div.sections div.section a.section.s_5.showing, #header div.sections div.section a.section.s_5:hover {
+            background: url("/images/Index/Navi_menu/index_navi_set.png") no-repeat -768px -40px; }
+=======
           background-position: 0 0; }
           #header div.sections div.section a.section.s_1.showing, #header div.sections div.section a.section.s_1:hover {
             background-position: 0 -40px; }
@@ -151,6 +172,7 @@
           background-position: -768px 0; }
           #header div.sections div.section a.section.s_5.showing, #header div.sections div.section a.section.s_5:hover {
             background-position: -768px -40px; }
+>>>>>>> 476da431ac6ade4fcf534b4e4224bbc6a8eeca1b
       #header div.sections div.section .folder_container {
         background: url(/images/Index/Sub_menu/index_sub_background.png) no-repeat 0 0;
         width: 192px;

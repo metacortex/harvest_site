@@ -154,3 +154,10 @@
 	:background -webkit-gradient(linear, left top, left bottom, from(#F4F4F4), to(#FBFBFB))
 	:background -moz-linear-gradient(top, #F4F4F4, #FBFBFB)
 	:filter progid:DXImageTransform.Microsoft.gradient(startColorstr=#F4F4F4, endColorstr=#FBFBFB)
+
+=image_tab_nav($image, $x, $y, $offset)
+	:background url($image) no-repeat $x $y
+	&.showing, 
+	&:hover
+		:background url($image) no-repeat $x ($y - $offset)
+
