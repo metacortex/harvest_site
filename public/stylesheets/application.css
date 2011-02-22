@@ -87,6 +87,8 @@
     width: 960px;
     height: 500px;
     background: url(/images/Index/Main/index_main.png) no-repeat 0 0; }
+    * html #header #main_image {
+      padding-bottom: 485px; }
     #header #main_image:after {
       content: ".";
       display: block;
