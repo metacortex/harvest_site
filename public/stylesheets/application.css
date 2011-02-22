@@ -553,6 +553,9 @@
   width: 960px;
   height: 212px;
   background: url(/images/Index/Bottom/index_bottom_background.png) no-repeat 0 0; }
+  #footer a {
+    position: relative;
+    top: 185px; }
 
 form.edit_comment textarea.text {
   width: 640px;

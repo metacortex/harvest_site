@@ -1,7 +1,7 @@
 <%= render :partial => '/main/rail' %>
 
 <div id="main_wrapper">
-	<%= admin_actions("#{link_to_function "게시판이름변경", "zLayer.open(event, '#{edit_section_folder_board_path(@section, @folder, @board)}')", :class => "link"}") %>
+	<%= admin_actions("#{link_to_function "게시판이름변경", "zLayer.open('#{edit_section_folder_board_path(@section, @folder, @board)}', event)", :class => "link"}") %>
 
 	<div class="main_container">
 

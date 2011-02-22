@@ -10,12 +10,12 @@
 
 		toolbar.addButton({
 			label: "Block",
-			handler: function(editor) { zLayer.open(editor.id, '<%= editor_path("block_selector") %>?editor_id=' + editor.id); }
+			handler: function(editor) { zLayer.open('<%= editor_path("block_selector") %>?editor_id=' + editor.id, editor.id); }
 		});
 
 		toolbar.addButton({
 			label: "FontColor",
-			handler: function(editor) { zLayer.open(editor.id, '<%= editor_path("color_picker") %>?editor_id=' + editor.id); }
+			handler: function(editor) { zLayer.open('<%= editor_path("color_picker") %>?editor_id=' + editor.id, editor.id); }
 		});
 
 		toolbar.addButton({
@@ -33,7 +33,7 @@
 
 		toolbar.addButton({
 			label: 'Image',
-			handler: function(editor) { editor.focus(); zLayer.open(editor.id, '<%= editor_path("new_image") %>?editor_id=' + editor.id); }
+			handler: function(editor) { editor.focus(); zLayer.open('<%= editor_path("new_image") %>?editor_id=' + editor.id, editor.id); }
 		});
 
 		toolbar.addButton({

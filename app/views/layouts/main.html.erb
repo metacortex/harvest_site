@@ -19,7 +19,10 @@
 			<%= yield %>
 		</div>
 
-		<div id="footer"></div>
+		<div id="footer">
+			<%= link_to_function image_tag('Index/Bottom/index_bottom_menu_01.png'), "zLayer.open('/privacy.html?s=auto')" %>
+			<%= link_to_function image_tag('Index/Bottom/index_bottom_menu_02.png'), "zLayer.open('/agreement.html?s=auto')" %>
+		</div>
 	</div>
 
 	<script>

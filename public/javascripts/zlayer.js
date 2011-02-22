@@ -14,7 +14,7 @@ zlayer = function(url, target) {
 	this.plate = document.createElement("div");
 	this.plate.id = "zlayer";
 	this.plate.style.position = "absolute";
-	this.plate.style.zIndex = "5001";
+	this.plate.style.zIndex = "5003";
 	this.plate.style.visibility = "hidden";
 	this.plate.style.backgroundColor = "#FFFFFF";
 	this.plate.style.borderWidth = "1px";
@@ -32,6 +32,13 @@ zlayer = function(url, target) {
 	this.body.style.border = "1px solid #B4BBCD";
 	this.body.style.borderTop = "none";
 	this.body.style.padding = "10px 20px";
+
+	if(/s=auto/gi.test(url)) {
+		var vp_dm = document.viewport.getDimensions();
+		this.body.style.height = (vp_dm.height - 100) + "px";
+		this.body.style.overflow = "auto";
+		this.body.style.overflowX = "hidden";
+	}
 
 	this.plate.appendChild(this.header);
 	this.plate.appendChild(this.body);
@@ -55,9 +62,6 @@ zlayer.prototype.positioning = function() {
 	var pt_dm = this.plate.getDimensions();
 	var vp_dm = document.viewport.getDimensions();
 	var vp_sc = document.viewport.getScrollOffsets();
-	console.log(pt_dm);
-	console.log(vp_dm);
-	console.log(vp_sc);
 
 	var tg_xy = {left:0, top:0};
 	if(this.target) {
