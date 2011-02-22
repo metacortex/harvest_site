@@ -2,7 +2,7 @@
 
 	<% cur_page = params[:page].blank? ? 1 : params[:page].to_i %>
 	<div class="f post_id">
-		<%= (@board.posts_count  * cur_page) - post_counter %>
+		<%= @board.posts_count - (Post.per_page * (cur_page - 1)) - post_counter %>
 	</div>
 
 	<div class="f post_title">

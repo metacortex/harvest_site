@@ -29,7 +29,8 @@ class BoardsController < ApplicationController
 		@board = Board.find(params[:id])
 		@title = @board.title
 
-		@posts = @board.posts.paginate(:page => params[:page], :order => "created_at desc", :per_page => Post.per_page)
+		conditions = params[:q].blank? ? "" : ["title like ?", "%#{params[:q]}%"]
+		@posts = @board.posts.paginate(:page => params[:page], :order => "created_at desc", :per_page => Post.per_page, :conditions => conditions)
 	end
 
 	def edit
