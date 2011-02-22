@@ -15,11 +15,17 @@
 
 		<% if @post.has_attachment? %>
 			<div class="post_attachment">
-				첨부파일: <%= link_to @post.attachment_file_name, @post.attachment.url, :class => "link" %>
+				첨부파일: <%= link_to @post.attachment_file_name, @post.attachment.url, :class => "link", :target => "_blank" %>
 			</div>
 		<% end %>
 
 		<div class="post_content">
+			<% if /image/i.match(@post.attachment_content_type) %>
+				<div class="attachment_image">
+					<%= image_tag(@post.attachment.url) %>
+				</div>
+				<%=%>
+			<% end %>
 			<%= @post.content.html_safe %>
 		</div>
 

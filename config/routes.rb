@@ -22,6 +22,7 @@ Harvest::Application.routes.draw do
 
 	match 'new_question' => "main#new_question", :as => 'new_question'
 	match 'question' => "main#question", :via => [:post], :as => 'question'
+	match 'company' => "main#company", :as => 'company'
 
 	root :to => "main#index"	
 end
