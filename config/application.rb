@@ -40,3 +40,14 @@ module Harvest
     config.filter_parameters += [:password]
   end
 end
+
+
+ActionMailer::Base.smtp_settings = {
+	:address              => "smtp.gmail.com",
+	:port                 => 587,
+	:domain               => 'gmail.com',
+	:user_name            => 'harvest.kor@gmail.com',
+	:password             => 'miralush',
+	:authentication       => 'plain',
+	:enable_starttls_auto => true
+}
