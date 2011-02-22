@@ -177,3 +177,6 @@ form .actions {
     color: white;
     background-color: #3b5998;
     border: 1px solid white; }
+
+.ww {
+  word-break: all; }
