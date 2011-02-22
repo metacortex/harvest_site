@@ -20,7 +20,7 @@
 		<div class="section">
 			<%= link_to s.name, section_path(s), :hidefocus => "true", :class => "section s_#{s.id} #{"showing" if !@section.blank? && @section == s}", :onmouseover => "show_folder_container('#{s.id}')" %>
 
-			<div id="folder_container_<%=i+1%>" class="fragile section_<%=i+1%> folder_container" style="display:none;">
+			<div id="folder_container_<%=i+1%>" class="fragile do_hide section_<%=i+1%> folder_container" style="display:none;">
 				<% s.folders.sequence.each_with_index do |f,j| %>
 					<%= link_to f.name, [s, f], :class => "#{"showing" if !@folder.blank? && @folder == f} folder_#{j+1}", :hidefocus => "true" %>
 				<% end %>
