@@ -409,6 +409,10 @@
     padding-bottom: 10px; }
   #section #main_wrapper div.board ul.posts {
     border-top: 1px solid #e2e2e2; }
+    #section #main_wrapper div.board ul.posts li.empty {
+      padding: 40px 0 20px;
+      font-weight: bold;
+      text-align: center; }
     #section #main_wrapper div.board ul.posts li.post {
       padding: 10px 0;
       border-bottom: 1px solid #e2e2e2; }
@@ -444,8 +448,29 @@
         #section #main_wrapper div.board ul.posts li.post div.f.post_hits {
           width: 40px; }
   #section #main_wrapper div.board .toolbar {
-    text-align: right;
-    padding: 5px 0; }
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+    padding: 15px 0 20px; }
+    #section #main_wrapper div.board .toolbar:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    #section #main_wrapper div.board .toolbar {
+      display: inline-block; }
+    * html #section #main_wrapper div.board .toolbar {
+      height: 1%; }
+    #section #main_wrapper div.board .toolbar {
+      display: block; }
+    #section #main_wrapper div.board .toolbar form input.text {
+      display: inline;
+      float: none; }
+    #section #main_wrapper div.board .toolbar a {
+      display: block;
+      position: absolute;
+      right: 0; }
   #section #main_wrapper div.post h5 {
     padding-bottom: 10px; }
   #section #main_wrapper div.post .post_byline {

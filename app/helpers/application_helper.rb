@@ -1,6 +1,17 @@
 # encoding: UTF-8
 module ApplicationHelper
 
+	def add_query(options = {})
+		specified_url = options.delete(:url) || request.path
+		if options.delete(:clear).blank?
+			queries = (options.inject(h = {}) {|h,v| h.merge(v[0].to_s => v[1])}).reverse_merge(request.query_parameters)
+		else
+			queries = (options.inject(h = {}) {|h,v| h.merge(v[0].to_s => v[1])})
+		end
+
+		"#{specified_url}?#{queries.to_param}"
+	end
+
 	def admin_actions(extra = "")
 		if logged_in_as_admin?
 			("<div class='admin_actions'>" +

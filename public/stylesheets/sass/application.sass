@@ -408,6 +408,10 @@
 				:padding-bottom !std_padding
 			ul.posts
 				:border-top 1px solid #e2e2e2
+				li.empty
+					:padding 40px 0 20px
+					:font-weight bold
+					:text-align center
 				li.post
 					+clearfix
 					:padding !std_padding 0
@@ -432,8 +436,19 @@
 						&.post_hits
 							:width 40px
 			.toolbar
-				:text-align right
+				+clearfix
+				:text-align center
 				:padding !std_margin 0
+				:position relative
+				:padding 15px 0 20px
+				form
+					input.text
+						:display inline
+						:float none
+				a
+					:display block
+					:position absolute
+					:right 0
 		div.post
 			h5
 				:padding-bottom !std_padding

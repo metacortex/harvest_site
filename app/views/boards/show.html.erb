@@ -9,11 +9,21 @@
 		<h5><%= @board.title %></h5>
 
 		<ul class="posts">
-			<%= render @posts %>
+			<% if @posts.blank? && !params[:q].blank? %>
+				<li class="empty">검색결과가 없습니다.</li>
+			<% else %>
+				<%= render @posts %>
+			<% end %>
 		</ul>
 
 		<div class="toolbar">
 			<%= link_to "글쓰기", new_section_folder_board_post_path(@section, @folder, @board), :class => "link" %>
+			<% form_tag '', :method => :get, :class => 'search' do %>
+				<div class="field">
+					<%= text_field_tag :q, "", :class => "text" %>
+					<%= submit_tag('검색', :class => 'izButton') %>
+				</div>
+			<% end %>
 		</div>
 
 		<div class="paginate">
