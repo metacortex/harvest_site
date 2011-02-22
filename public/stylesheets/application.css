@@ -53,6 +53,11 @@
       height: 1%; }
     #header div.top_actions {
       display: block; }
+    #header div.top_actions iframe {
+      position: relative !important;
+      width: 150px !important;
+      top: -4px !important;
+      float: left; }
     #header div.top_actions a {
       display: block;
       float: left;
