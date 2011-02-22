@@ -1,6 +1,18 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+function show_folder_container(id) {
+
+	var dom_id = "folder_container_" + id;
+	$$(".folder_container").each(function(fc) {
+		if(fc.id == dom_id) return;
+		fc.style.height = "";
+		fc.hide();
+	});
+
+	if($(dom_id).style.display == "none") Effect.BlindDown(dom_id, {duration:0.5});
+};
+
 function mOver(n) { $(n).addClassName("hover"); };
 function mOut(n) { $(n).removeClassName("hover"); };
 

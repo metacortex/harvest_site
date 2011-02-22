@@ -2,8 +2,8 @@
 
 <div class="top_actions">
 	<% if logged_in? %>
-		<%= link_to "로그아웃", logout_path %>  
-		<%= link_to "계정설정", edit_user_path(@current_user.id) %> 
+		<%= link_to "로그아웃", logout_path, :class => "logout", :hidefocus => "true" %>  
+		<%# link_to "계정설정", edit_user_path(@current_user.id) %> 
 		<%# link_to "회원탈퇴", user_path(@current_user.id), :remote => true, :method=> :delete, :confirm => "정말 탈퇴하시겠습니까?", :class => "link" %> 
 	<% else %>
 		<%= link_to "로그인", login_path, :class => "login", :hidefocus => "true" %>
@@ -16,17 +16,16 @@
 <%= content_tag(:div, "", :id => "main_image") if params[:controller] == "main" && params[:action] == "index" %>
 
 <div class="sections">
-	<% Section.all.each do |s| %>
-		<%= link_to s.name, section_path(s), :hidefocus => "true", :class => "s_#{s.id} #{"showing" if !@section.blank? && @section == s}" %>
-	<% end %>
-</div>
+	<% Section.all.each_with_index do |s, i| %>
+		<div class="section">
+			<%= link_to s.name, section_path(s), :hidefocus => "true", :class => "section s_#{s.id} #{"showing" if !@section.blank? && @section == s}", :onmouseover => "show_folder_container('#{s.id}')" %>
 
-<div class="folders">
-	<% Section.all.each_with_index do |s,i| %>
-		<div class="folder_container section_<%=i+1%>">
-			<% s.folders.sequence.each_with_index do |f,j| %>
-				<%= link_to f.name, [s, f], :class => "#{"showing" if !@folder.blank? && @folder == f} folder_#{j+1}", :hidefocus => "true" %>
-			<% end %>
+			<div id="folder_container_<%=i+1%>" class="fragile section_<%=i+1%> folder_container" style="display:none;">
+				<% s.folders.sequence.each_with_index do |f,j| %>
+					<%= link_to f.name, [s, f], :class => "#{"showing" if !@folder.blank? && @folder == f} folder_#{j+1}", :hidefocus => "true" %>
+				<% end %>
+			</div>
 		</div>
+
 	<% end %>
 </div>
