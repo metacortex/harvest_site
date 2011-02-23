@@ -17,7 +17,12 @@
 	<%= link_to "회사소개", "/company", :class => "company", :hidefocus => "true" %>
 </div>
 
-<%= content_tag(:div, "", :id => "main_image") if params[:controller] == "main" && params[:action] == "index" %>
+<% if params[:controller] == "main" && params[:action] == "index" %>
+  <%= content_tag(:div, "", :id => "main_image")  %>
+  <div class="main_banner">
+    <%= link_to (image_tag "/images/banners/conference_banner.gif"), "http://harvest.co.kr/sections/5/folders/9/boards/2/posts/28" %>
+  </div>
+<% end %>
 
 <div class="sections">
 	<% Section.all.each_with_index do |s, i| %>

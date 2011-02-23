@@ -617,3 +617,10 @@ div#error_explanation {
   width: 420px;
   margin: 0 auto;
   padding-top: 30px; }
+
+.main_banner {
+  position: absolute;
+  float: left;
+  z-index: 999;
+  margin-top: -240px;
+  margin-left: 27px; }
