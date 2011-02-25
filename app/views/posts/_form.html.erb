@@ -8,6 +8,16 @@
 		toolbar.addButton({ label: "Italic" });
 		toolbar.addButton({ name: 'strikethrough', label: "Strike" });
 
+		toolbar.addButton({
+			label: 'Image',
+			handler: function(editor) { editor.focus(); zLayer.open('<%= editor_path("new_image") %>?editor_id=' + editor.id, editor.id); }
+		});
+
+		toolbar.addButton({
+			label: 'HTML',
+			handler: function(editor) { toggleHTML(editor); }
+		});
+
 		// toolbar.addButtonSet(WysiHat.Toolbar.ButtonSets.Basic);
 
 		// Hide our error message if the editor loads fine

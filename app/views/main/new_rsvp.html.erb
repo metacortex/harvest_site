@@ -1,0 +1,46 @@
+<div id="main_wrapper">
+	<div class="main_container">
+	  
+	  <h2 class="new_rsvp">컨퍼런스 신청서 작성하기</h2>
+
+		<%= form_for '', :url => rsvp_path, :html => { :multipart => true, :class => "new_question", :onsubmit => "zLoading();" } do |f| %>
+
+			<div class="field">
+				<%= f.text_field :hospital, :class => "text control_placeholder", :placeholder => "병원명", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :department, :class => "text control_placeholder", :placeholder => "진료과목 및 직책", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :name, :class => "text control_placeholder", :placeholder => "성명", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :phone, :class => "text control_placeholder", :placeholder => "연락처", :autocomplete => "off" %>
+			</div>
+
+			<div class="field">
+				<%= f.text_field :email, :class => "text control_placeholder", :placeholder => "이메일", :autocomplete => "off" %>
+			</div>
+
+			<div class="actions">
+				<%= submit_tag("참가신청서 접수", :class => "zButton") %>
+				<%= cancel_to %>
+			</div>
+
+		<% end %>
+
+
+	</div>
+	<div class="main_bottom"></div>
+
+</div>
+
+
+
+
+
+
+

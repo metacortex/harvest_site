@@ -624,3 +624,9 @@ div#error_explanation {
   z-index: 999;
   margin-top: -240px;
   margin-left: 27px; }
+
+h2.new_rsvp {
+  margin: 0 200px;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold; }
