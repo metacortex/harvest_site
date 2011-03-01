@@ -122,7 +122,8 @@ form .field {
     color: #999999;
     letter-spacing: -1px; }
   form .field input.file {
-    display: block; }
+    display: block;
+    padding: 4px 0; }
   form .field input.text {
     display: block;
     float: left;
@@ -183,13 +184,14 @@ form .actions {
 
 .custom_post .thesis_title {
   height: 55px;
-  text-indent: -9999em; }
+  text-indent: -9999em;
+  padding-bottom: 15px; }
   .custom_post .thesis_title.no_1 {
     background: url(/images/sub_page/papers/sub_thesis_APC_title.png) no-repeat 0 0; }
   .custom_post .thesis_title.no_2 {
     background: url(/images/sub_page/papers/sub_thesis_BMAC_title.png) no-repeat 0 0; }
 .custom_post .thesis_navigator {
-  background: url(/images/bg_thesis.png) no-repeat 0 0;
+  background: url(/images/sub_thesis_References_bg.png) no-repeat 0 0;
   width: 605px;
   height: 90px;
   overflow: hidden;

@@ -603,6 +603,8 @@ div.login_form_wrapper {
     padding: 75px 0 0 60px; }
     div.login_form_wrapper form .field {
       padding: 19px 0 0 0; }
+      div.login_form_wrapper form .field input.text {
+        width: 237px; }
     div.login_form_wrapper form .actions {
       padding-top: 10px; }
 
@@ -610,13 +612,15 @@ div.signup_form_wrapper {
   width: 307px;
   height: 280px;
   background: url(/images/sub_page/main/sub_main_Join_area.png) no-repeat 0 0;
-  margin: 60px auto 0;
+  margin: 60px auto;
   position: relative;
   padding: 0 63px 0 50px; }
   div.signup_form_wrapper form {
     padding: 54px 0 0 60px; }
     div.signup_form_wrapper form .field {
       padding: 10px 0 0 0; }
+      div.signup_form_wrapper form .field input.text {
+        width: 237px; }
     div.signup_form_wrapper form .actions {
       padding-top: 10px; }
 
