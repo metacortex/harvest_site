@@ -129,3 +129,40 @@ form
 
 .ww
 	:word-break all
+
+
+.custom_post
+	.thesis_title
+		:height 55px
+		:text-indent -9999em
+		&.no_1
+			:background url(/images/sub_page/papers/sub_thesis_APC_title.png) no-repeat 0 0
+		&.no_2
+			:background url(/images/sub_page/papers/sub_thesis_BMAC_title.png) no-repeat 0 0
+	.thesis_navigator
+		:background url(/images/bg_thesis.png) no-repeat 0 0
+		:width 605px
+		:height 90px
+		:overflow hidden
+		:padding-left 235px
+		+clearfix
+		ul.row
+			:background #e5e7ec
+			:float left
+			:width 201px
+			:height 78px
+			:overflow hidden
+			:margin 6px 0
+			li
+				:height 26px
+				:line-height 26px
+				:border-left 1px solid #888
+				:padding-left 11px
+				a
+					:color #333
+					:text-decoration none
+					:font-size 13px
+					&:hover
+						:color #d73232
+					&.keepline
+						:letter-spacing -1px

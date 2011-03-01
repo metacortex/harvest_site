@@ -6,19 +6,23 @@
 		<%= form_for '', :url => question_path, :html => { :multipart => true, :class => "new_question", :onsubmit => "zLoading();" } do |f| %>
 
 			<div class="field">
-				<%= f.text_field :title, :class => "text control_placeholder", :placeholder => "제목..", :autocomplete => "off" %>
+				<%= f.label :title, "제&nbsp;&nbsp;&nbsp;&nbsp;목".html_safe %>
+				<%= f.text_field :title, :class => "text", :autocomplete => "off" %>
 			</div>
 
 			<div class="field">
-				<%= f.text_field :name, :class => "text control_placeholder", :placeholder => "이름", :autocomplete => "off" %>
+				<%= f.label :name, "이&nbsp;&nbsp;&nbsp;&nbsp;름".html_safe %>
+				<%= f.text_field :name, :class => "text", :autocomplete => "off" %>
 			</div>
 
 			<div class="field">
-				<%= f.text_field :email, :class => "text control_placeholder", :placeholder => "이메일", :autocomplete => "off" %>
+				<%= f.label :email, "이메일" %>
+				<%= f.text_field :email, :class => "text", :autocomplete => "off" %>
 			</div>
 
 			<div class="field">
-				<%= f.text_field :phone, :class => "text control_placeholder", :placeholder => "연락처", :autocomplete => "off" %>
+				<%= f.label :phone, "연락처" %>
+				<%= f.text_field :phone, :class => "text", :autocomplete => "off" %>
 			</div>
 
 			<div class="field">

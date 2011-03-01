@@ -334,6 +334,12 @@
 		form.new_question
 			:width !main_width / 2
 			:margin 0 auto
+			label
+				:width 55px
+				:text-align center
+				:font-weight bold
+				:font-size 13px
+				:letter-spacing -1px
 			input.text
 				:width (!main_width - (!input_padding*2) - (!border_width*2) - 60px) / 4 * 3 / 2
 			textarea.text
@@ -414,12 +420,13 @@
 					:right 0
 		div.post
 			h5
-				:padding-bottom !std_padding
+				:padding-bottom !std_padding*3
+				:border-bottom 1px solid #43668F
 			.post_byline
 				:text-align right
 			.post_attachment
 				:padding !std_margin !std_padding
-				:background-color #e9e9e9
+				:text-align right
 			.post_content
 				:padding !std_padding 0
 				.attachment_image

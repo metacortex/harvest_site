@@ -180,3 +180,49 @@ form .actions {
 
 .ww {
   word-break: all; }
+
+.custom_post .thesis_title {
+  height: 55px;
+  text-indent: -9999em; }
+  .custom_post .thesis_title.no_1 {
+    background: url(/images/sub_page/papers/sub_thesis_APC_title.png) no-repeat 0 0; }
+  .custom_post .thesis_title.no_2 {
+    background: url(/images/sub_page/papers/sub_thesis_BMAC_title.png) no-repeat 0 0; }
+.custom_post .thesis_navigator {
+  background: url(/images/bg_thesis.png) no-repeat 0 0;
+  width: 605px;
+  height: 90px;
+  overflow: hidden;
+  padding-left: 235px; }
+  .custom_post .thesis_navigator:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  .custom_post .thesis_navigator {
+    display: inline-block; }
+  * html .custom_post .thesis_navigator {
+    height: 1%; }
+  .custom_post .thesis_navigator {
+    display: block; }
+  .custom_post .thesis_navigator ul.row {
+    background: #e5e7ec;
+    float: left;
+    width: 201px;
+    height: 78px;
+    overflow: hidden;
+    margin: 6px 0; }
+    .custom_post .thesis_navigator ul.row li {
+      height: 26px;
+      line-height: 26px;
+      border-left: 1px solid #888888;
+      padding-left: 11px; }
+      .custom_post .thesis_navigator ul.row li a {
+        color: #333333;
+        text-decoration: none;
+        font-size: 13px; }
+        .custom_post .thesis_navigator ul.row li a:hover {
+          color: #d73232; }
+        .custom_post .thesis_navigator ul.row li a.keepline {
+          letter-spacing: -1px; }
